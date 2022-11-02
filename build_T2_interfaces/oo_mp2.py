@@ -38,44 +38,22 @@ class MP2AsFCISolver(object):
         return dm1, dm2
 
 
-############
-# This section goes inside calling program
-mol = gto.M(atom = 'H 0 0 0; F 0 0 1.2',
-            basis = 'ccpvdz',
-            verbose = 4)
-mf = scf.RHF(mol).run()
-#############
-# Call Run_OO_MP2(mf,mol)
-mo_occ=mf.mo_occ
-norb = mf.mo_coeff.shape[1]
-nelec = mol.nelectron
-mc = mcscf.CASSCF(mf, norb, nelec)
-mc.fcisolver = MP2AsFCISolver()
-# Internal rotation needs to be enabled so that orbitals are optimized in
-# active space which were modeled by MP2
-mc.internal_rotation = True
-mc.kernel()
 
-
-convg_C=mc.mo_coeff
-print(convg_C)
+def Run_OO_MP2(mf,mol):
+    mo_occ=mf.mo_occ
+    norb = mf.mo_coeff.shape[1]
+    nelec = mol.nelectron
+    mc = mcscf.CASSCF(mf, norb, nelec)
+    mc.fcisolver = MP2AsFCISolver()
+    # Internal rotation needs to be enabled so that orbitals are optimized in
+    # active space which were modeled by MP2
+    mc.internal_rotation = True
+    mc.kernel()
+    
+    
+    convg_C=mc.mo_coeff
+    print(convg_C)
+    return convg_C
 
 
 
-### Returns set of new, optimized MO coefficients
-
-mf2=scf.RHF(mol)
-print(mo_occ)
-dm1=mf2.make_rdm1(convg_C,mo_occ)
-mf2.init_guess=dm1
-mf2.run(max_cycle=0)
-
-mycc = cc.CCSD(mf2)
-old_update_amps = mycc.update_amps
-def update_amps(t1, t2, eris):
-    t1, t2 = old_update_amps(t1, t2, eris)
-    return t1*0, t2
-mycc.update_amps = update_amps
-mycc.kernel()
-
-print('CCD correlation energy', mycc.e_corr)
