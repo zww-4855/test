@@ -1,0 +1,194 @@
+#INFO: **** input file is /blue/bartlett/z.windom/MOLSSI_develop/test/build_T2_interfaces/testCCD.py/bruecknerCCD.py ****
+import pyscf
+from pyscf import cc
+import numpy
+from scipy import linalg as la
+
+from pyscf import lib
+
+from pyscf.cc.bccd import bccd_kernel_
+#import 
+numpy.set_printoptions(3, linewidth=1000, suppress=True)
+mol = pyscf.M(
+#    atom = 'H 0 0 0; F 0 0 1.1',
+     atom='H 0.00000000    -0.75299460     0.50421485; O -0.00000000     0.00000000    -0.06354025;H -0.00000000     0.75299460     0.50421485',
+    basis = 'ccpvdz',
+    verbose = 4,
+    spin = 0,
+)
+
+myhf = mol.HF()
+myhf.kernel()
+E_ref = myhf.e_tot
+rdm1_mf = myhf.make_rdm1()
+
+mycc = cc.CCSD(myhf)
+mycc.kernel()
+
+mycc = bccd_kernel_(mycc, diis=True, verbose=4)
+
+print (la.norm(mycc.t1))
+assert la.norm(mycc.t1) < 1e-5
+#INFO: ******************** input file end ********************
+
+
+System: uname_result(system='Linux', node='login1.ufhpc', release='3.10.0-1062.18.1.el7.x86_64', version='#1 SMP Wed Feb 12 14:08:31 UTC 2020', machine='x86_64', processor='x86_64')  Threads 32
+Python 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:21) 
+[GCC 9.4.0]
+numpy 1.21.6  scipy 1.7.3
+Date: Thu Nov  3 21:02:17 2022
+PySCF version 2.1.1
+PySCF path  /blue/bartlett/z.windom/MOLSSI_develop/T2method/new/pyscf
+GIT ORIG_HEAD de18a8bd633ca845e6d23d9e5d9959ee816683e5
+GIT HEAD (branch bruecknerTest) dcda47e936474a7fd92e5d6b7544e529532f98ba
+
+[ENV] PYSCF_INC_DIR /home/z.windom/libxc-4.3.4
+[CONFIG] conf_file /home/z.windom/.pyscf_conf.py
+[INPUT] verbose = 4
+[INPUT] num. atoms = 3
+[INPUT] num. electrons = 10
+[INPUT] charge = 0
+[INPUT] spin (= nelec alpha-beta = 2S) = 0
+[INPUT] symmetry False subgroup None
+[INPUT] Mole.unit = angstrom
+[INPUT] Symbol           X                Y                Z      unit          X                Y                Z       unit  Magmom
+[INPUT]  1 H      0.000000000000  -0.752994600000   0.504214850000 AA    0.000000000000  -1.422953567276   0.952827974439 Bohr   0.0
+[INPUT]  2 O      0.000000000000   0.000000000000  -0.063540250000 AA    0.000000000000   0.000000000000  -0.120073670386 Bohr   0.0
+[INPUT]  3 H      0.000000000000   0.752994600000   0.504214850000 AA    0.000000000000   1.422953567276   0.952827974439 Bohr   0.0
+
+nuclear repulsion = 9.32950502845938
+number of shells = 11
+number of NR pGTOs = 40
+number of NR cGTOs = 24
+basis = ccpvdz
+ecp = {}
+CPU time:         0.81
+
+
+******** <class 'pyscf.scf.hf.RHF'> ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level_shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+diis_start_cycle = 1
+diis_space = 8
+SCF conv_tol = 1e-09
+SCF conv_tol_grad = None
+SCF max_cycles = 50
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /blue/bartlett/z.windom/MOLSSI_develop/test/build_T2_interfaces/testCCD.py/tmpsocrmsl8
+max_memory 4000 MB (current use 85 MB)
+Set gradient conv threshold to 3.16228e-05
+init E= -75.8862065087009
+  HOMO = -0.48110317719963  LUMO = 0.10444820224587
+cycle= 1 E= -75.9889044577041  delta_E= -0.103  |g|= 0.446  |ddm|= 1.32
+  HOMO = -0.415278720781915  LUMO = 0.189413122418628
+cycle= 2 E= -76.0183940367542  delta_E= -0.0295  |g|= 0.223  |ddm|= 0.365
+  HOMO = -0.500877769007987  LUMO = 0.183755362231636
+cycle= 3 E= -76.0267953789219  delta_E= -0.0084  |g|= 0.0268  |ddm|= 0.13
+  HOMO = -0.492171003313823  LUMO = 0.188243795503083
+cycle= 4 E= -76.0269746532624  delta_E= -0.000179  |g|= 0.00574  |ddm|= 0.0183
+  HOMO = -0.493427789291469  LUMO = 0.188315050046587
+cycle= 5 E= -76.0269883606959  delta_E= -1.37e-05  |g|= 0.000758  |ddm|= 0.00677
+  HOMO = -0.493655548224905  LUMO = 0.18823360208213
+cycle= 6 E= -76.0269886548068  delta_E= -2.94e-07  |g|= 0.000133  |ddm|= 0.0011
+  HOMO = -0.493691238530283  LUMO = 0.188233460038555
+cycle= 7 E= -76.026988664288  delta_E= -9.48e-09  |g|= 1.19e-05  |ddm|= 0.000235
+  HOMO = -0.493688987139483  LUMO = 0.188233025235445
+cycle= 8 E= -76.0269886643606  delta_E= -7.26e-11  |g|= 2.66e-06  |ddm|= 1.92e-05
+  HOMO = -0.49368874034022  LUMO = 0.188232987484084
+Extra cycle  E= -76.0269886643652  delta_E= -4.58e-12  |g|= 1.2e-06  |ddm|= 4.14e-06
+converged SCF energy = -76.0269886643652
+
+******** <class 'pyscf.cc.ccsd.CCSD'> ********
+CC2 = 0
+CCSD nocc = 5, nmo = 24
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 93 MB)
+Init t2, MP2 energy = -76.2298450811341  E_corr(MP2) -0.202856416768947
+Init E_corr(CCSD) = -0.202856416769572
+cycle = 1  E_corr(CCSD) = -0.207980292069935  dE = -0.0051238753  norm(t1,t2) = 0.0209447
+cycle = 2  E_corr(CCSD) = -0.211066458513399  dE = -0.00308616644  norm(t1,t2) = 0.00718195
+cycle = 3  E_corr(CCSD) = -0.212083548548074  dE = -0.00101709003  norm(t1,t2) = 0.0026929
+cycle = 4  E_corr(CCSD) = -0.212203105792295  dE = -0.000119557244  norm(t1,t2) = 0.000481546
+cycle = 5  E_corr(CCSD) = -0.212187128219846  dE = 1.59775724e-05  norm(t1,t2) = 0.000160428
+cycle = 6  E_corr(CCSD) = -0.212184377961873  dE = 2.75025797e-06  norm(t1,t2) = 4.55708e-05
+cycle = 7  E_corr(CCSD) = -0.212185718729925  dE = -1.34076805e-06  norm(t1,t2) = 1.41362e-05
+cycle = 8  E_corr(CCSD) = -0.212185194670265  dE = 5.2405966e-07  norm(t1,t2) = 2.68362e-06
+cycle = 9  E_corr(CCSD) = -0.212185183016757  dE = 1.16535083e-08  norm(t1,t2) = 7.07199e-07
+CCSD converged
+E(CCSD) = -76.23917384738193  E_corr = -0.2121851830167569
+BCCD loop starts.
+
+******** <class 'pyscf.cc.ccsd.CCSD'> ********
+CC2 = 0
+CCSD nocc = 5, nmo = 24
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 101 MB)
+Init E_corr(CCSD) = -0.212152221773591
+cycle = 1  E_corr(CCSD) = -0.213479052568872  dE = -0.0013268308  norm(t1,t2) = 0.0137812
+cycle = 2  E_corr(CCSD) = -0.212983892168709  dE = 0.0004951604  norm(t1,t2) = 0.00228909
+cycle = 3  E_corr(CCSD) = -0.212959749150095  dE = 2.41430186e-05  norm(t1,t2) = 0.00101213
+cycle = 4  E_corr(CCSD) = -0.212922760880344  dE = 3.69882698e-05  norm(t1,t2) = 0.00028917
+cycle = 5  E_corr(CCSD) = -0.212919750774507  dE = 3.01010584e-06  norm(t1,t2) = 0.00012028
+cycle = 6  E_corr(CCSD) = -0.212921606969925  dE = -1.85619542e-06  norm(t1,t2) = 1.96072e-05
+cycle = 7  E_corr(CCSD) = -0.21292188337123  dE = -2.76401305e-07  norm(t1,t2) = 5.32529e-06
+cycle = 8  E_corr(CCSD) = -0.212921950939292  dE = -6.75680612e-08  norm(t1,t2) = 7.44683e-07
+CCSD converged
+E(CCSD) = -76.23905274804611  E_corr = -0.2129219509392915
+BCC iter:    0  E:     -76.239052748046  dE:    1.211e-04  |t1|:    1.094e-03
+
+******** <class 'pyscf.cc.ccsd.CCSD'> ********
+CC2 = 0
+CCSD nocc = 5, nmo = 24
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 101 MB)
+Init E_corr(CCSD) = -0.212903201956041
+cycle = 1  E_corr(CCSD) = -0.212884362408339  dE = 1.88395477e-05  norm(t1,t2) = 0.00128678
+cycle = 2  E_corr(CCSD) = -0.212890088486673  dE = -5.72607833e-06  norm(t1,t2) = 0.000147171
+cycle = 3  E_corr(CCSD) = -0.212890278883324  dE = -1.90396651e-07  norm(t1,t2) = 6.18647e-05
+cycle = 4  E_corr(CCSD) = -0.212892068979921  dE = -1.7900966e-06  norm(t1,t2) = 2.48721e-05
+cycle = 5  E_corr(CCSD) = -0.212891982400094  dE = 8.65798274e-08  norm(t1,t2) = 4.69783e-06
+CCSD converged
+E(CCSD) = -76.23905593501519  E_corr = -0.2128919824000941
+BCC iter:    1  E:     -76.239055935015  dE:   -3.187e-06  |t1|:    1.882e-04
+
+******** <class 'pyscf.cc.ccsd.CCSD'> ********
+CC2 = 0
+CCSD nocc = 5, nmo = 24
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 101 MB)
+Init E_corr(CCSD) = -0.212892394359473
+cycle = 1  E_corr(CCSD) = -0.212892912743324  dE = -5.18383851e-07  norm(t1,t2) = 0.000203116
+cycle = 2  E_corr(CCSD) = -0.21289296201304  dE = -4.92697158e-08  norm(t1,t2) = 2.20571e-05
+cycle = 3  E_corr(CCSD) = -0.212892979483318  dE = -1.74702778e-08  norm(t1,t2) = 5.89692e-06
+CCSD converged
+E(CCSD) = -76.23905570737519  E_corr = -0.2128929794833177
+BCC iter:    2  E:     -76.239055707375  dE:    2.276e-07  |t1|:    4.525e-06
+4.525353752756043e-06

@@ -1,0 +1,62 @@
+converged SCF energy = -25.0956890202653
+[[-1.27696067e+01  2.43757148e-01  1.40435401e-01 -1.91424340e-16
+  -4.68016376e-16]
+ [ 2.43757148e-01 -2.84446691e+00 -1.66492535e-01  5.82928317e-17
+  -1.27913116e-16]
+ [ 1.40435401e-01 -1.66492535e-01 -2.47236104e+00  5.37721568e-17
+   5.00232740e-17]
+ [-1.91424340e-16  5.82928317e-17  5.37721568e-17 -2.20863471e+00
+   6.61440557e-16]
+ [-4.68016376e-16 -1.27913116e-16  5.00232740e-17  7.58058559e-16
+  -2.20863471e+00]] 
+ [[-1.27696067e+01  2.43757148e-01  1.40435401e-01  3.62689248e-15
+   5.93120713e-16]
+ [ 2.43757148e-01 -2.84446691e+00 -1.66492535e-01  8.30421993e-17
+  -3.80584674e-18]
+ [ 1.40435401e-01 -1.66492535e-01 -2.47236104e+00 -5.04124615e-17
+   1.02743102e-16]
+ [ 3.62689248e-15  8.30421993e-17 -5.04124615e-17 -2.20863471e+00
+  -1.64954758e-16]
+ [ 5.93120713e-16 -3.80584674e-18  1.02743102e-16 -1.07879553e-16
+  -2.20863471e+00]]
+False
+[[False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False False]
+ [False False False False False False False False False False False False
+  False False False False False False  True]]
+0.2437571475044459 0.2437571475044457
+tei (19, 19, 19, 19) 19

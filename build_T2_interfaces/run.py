@@ -10,14 +10,29 @@ import numpy
 from pyscf import gto, scf, mp, mcscf
 from pyscf import cc
 from oo_mp2 import *
-
-mol = gto.M(atom = 'H 0 0 0; F 0 0 1.2',
+from initialize_cc import *
+import ultT2_cc
+from pyscf import ao2mo
+import sys
+mol = gto.M(atom = 'H 0 0 0; B 0 0 0.9',
             basis = 'ccpvdz',
             verbose = 4)
 mf = scf.RHF(mol).run()
 
 # Call OO-MP2 routine
-convg_C=Run_OO_MP2(mf,mol)
+#convg_C=Run_OO_MP2(mf,mol)
+convg_C=mf.mo_coeff
+
+#mf.mo_coeff=convg_C
+
+# Initialize CC method; harvest 1/2 e- integrals
+nsvirt, nsocc, fock, g, o, v, e_ai, e_abij, e_abcijk = Initialize_CC(mf,mol,convg_C)
+
+# Call CC method based on T2
+t2f = ultT2_cc.CCDkernel(np.zeros((nsvirt, nsocc)), np.zeros((nsvirt, nsvirt, nsocc, nsocc)), fock, g, o, v, e_ai, e_abij,mf.energy_nuc(),diis_size=8)
+
+
+sys.exit()
 
 
 # Use OO-MP2 orbitals to extract new correlation energy
