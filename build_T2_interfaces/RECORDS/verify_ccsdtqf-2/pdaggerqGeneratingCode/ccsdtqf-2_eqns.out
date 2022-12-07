@@ -1,0 +1,480 @@
+
+    < 0 | i* j* b a e(-T) H e(T) | 0> :
+
+['-0.50000000000000', 'P(i,j)', 'P(b,c)', '<n,m||e,f>', 't2(e,f,k,l)', 't2(a,b,j,m)', 't2(c,d,i,n)']
+['-0.50000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,f,k,l)', 't2(a,d,j,m)', 't2(b,c,i,n)']
+['+0.50000000000000', 'P(i,k)', 'P(b,c)', '<n,m||e,f>', 't2(e,f,j,l)', 't2(a,b,k,m)', 't2(c,d,i,n)']
+['+0.50000000000000', 'P(i,k)', '<n,m||e,f>', 't2(e,f,j,l)', 't2(a,d,k,m)', 't2(b,c,i,n)']
+['-0.50000000000000', 'P(j,k)', 'P(b,c)', '<n,m||e,f>', 't2(e,f,i,l)', 't2(a,b,k,m)', 't2(c,d,j,n)']
+['-0.50000000000000', 'P(j,k)', '<n,m||e,f>', 't2(e,f,i,l)', 't2(a,d,k,m)', 't2(b,c,j,n)']
+['-0.50000000000000', 'P(i,l)', 'P(b,c)', '<n,m||e,f>', 't2(e,f,j,k)', 't2(a,b,l,m)', 't2(c,d,i,n)']
+['-0.50000000000000', 'P(i,l)', '<n,m||e,f>', 't2(e,f,j,k)', 't2(a,d,l,m)', 't2(b,c,i,n)']
+['+0.50000000000000', 'P(j,l)', 'P(b,c)', '<n,m||e,f>', 't2(e,f,i,k)', 't2(a,b,l,m)', 't2(c,d,j,n)']
+['+0.50000000000000', 'P(j,l)', '<n,m||e,f>', 't2(e,f,i,k)', 't2(a,d,l,m)', 't2(b,c,j,n)']
+['-0.50000000000000', 'P(k,l)', 'P(b,c)', '<n,m||e,f>', 't2(e,f,i,j)', 't2(a,b,l,m)', 't2(c,d,k,n)']
+['-0.50000000000000', 'P(k,l)', '<n,m||e,f>', 't2(e,f,i,j)', 't2(a,d,l,m)', 't2(b,c,k,n)']
+['+1.00000000000000', 'P(i,j)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,l,m)', 't2(f,b,j,k)', 't2(c,d,i,n)']
+['+1.00000000000000', 'P(k,l)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,l,m)', 't2(f,b,i,j)', 't2(c,d,k,n)']
+['+1.00000000000000', 'P(i,j)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,l,m)', 't2(f,d,j,k)', 't2(b,c,i,n)']
+['+1.00000000000000', 'P(k,l)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,l,m)', 't2(f,d,i,j)', 't2(b,c,k,n)']
+['-1.00000000000000', 'P(i,j)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,k,m)', 't2(f,b,j,l)', 't2(c,d,i,n)']
+['-1.00000000000000', 'P(i,j)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,k,m)', 't2(f,d,j,l)', 't2(b,c,i,n)']
+['+1.00000000000000', 'P(i,k)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,j,m)', 't2(f,b,k,l)', 't2(c,d,i,n)']
+['+1.00000000000000', 'P(i,j)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,j,m)', 't2(f,b,i,k)', 't2(c,d,l,n)']
+['+1.00000000000000', 'P(i,k)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,j,m)', 't2(f,d,k,l)', 't2(b,c,i,n)']
+['+1.00000000000000', 'P(i,j)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,j,m)', 't2(f,d,i,k)', 't2(b,c,l,n)']
+['-1.00000000000000', 'P(j,k)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,i,m)', 't2(f,b,k,l)', 't2(c,d,j,n)']
+['-1.00000000000000', 'P(j,k)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,i,m)', 't2(f,d,k,l)', 't2(b,c,j,n)']
+['+1.00000000000000', 'P(i,j)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,k,l)', 't2(f,b,j,m)', 't2(c,d,i,n)']
+['-0.50000000000000', 'P(j,k)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,k,l)', 't2(f,b,i,j)', 't2(c,d,n,m)']
+['+1.00000000000000', 'P(i,j)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,k,l)', 't2(f,d,j,m)', 't2(b,c,i,n)']
+['-0.50000000000000', 'P(j,k)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,k,l)', 't2(f,d,i,j)', 't2(b,c,n,m)']
+['-1.00000000000000', 'P(i,k)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,j,l)', 't2(f,b,k,m)', 't2(c,d,i,n)']
+['-1.00000000000000', 'P(i,k)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,j,l)', 't2(f,d,k,m)', 't2(b,c,i,n)']
+['+1.00000000000000', 'P(j,k)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,i,l)', 't2(f,b,k,m)', 't2(c,d,j,n)']
+['-0.50000000000000', 'P(k,l)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,i,l)', 't2(f,b,j,k)', 't2(c,d,n,m)']
+['+1.00000000000000', 'P(j,k)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,i,l)', 't2(f,d,k,m)', 't2(b,c,j,n)']
+['-0.50000000000000', 'P(k,l)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,i,l)', 't2(f,d,j,k)', 't2(b,c,n,m)']
+['+1.00000000000000', 'P(i,l)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,j,k)', 't2(f,b,l,m)', 't2(c,d,i,n)']
+['-0.50000000000000', 'P(i,k)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,j,k)', 't2(f,b,i,l)', 't2(c,d,n,m)']
+['+1.00000000000000', 'P(i,l)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,j,k)', 't2(f,d,l,m)', 't2(b,c,i,n)']
+['-0.50000000000000', 'P(i,k)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,j,k)', 't2(f,d,i,l)', 't2(b,c,n,m)']
+['-1.00000000000000', 'P(j,l)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,i,k)', 't2(f,b,l,m)', 't2(c,d,j,n)']
+['-1.00000000000000', 'P(j,l)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,i,k)', 't2(f,d,l,m)', 't2(b,c,j,n)']
+['+1.00000000000000', 'P(k,l)', 'P(b,c)', '<n,m||e,f>', 't2(e,a,i,j)', 't2(f,b,l,m)', 't2(c,d,k,n)']
+['+1.00000000000000', 'P(k,l)', 'P(a,b)', '<n,m||e,f>', 't2(e,a,i,j)', 't2(f,d,l,m)', 't2(b,c,k,n)']
+['+1.00000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,b,l,m)', 't2(f,c,j,k)', 't2(a,d,i,n)']
+['+1.00000000000000', 'P(k,l)', '<n,m||e,f>', 't2(e,b,l,m)', 't2(f,c,i,j)', 't2(a,d,k,n)']
+['-1.00000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,b,k,m)', 't2(f,c,j,l)', 't2(a,d,i,n)']
+['+1.00000000000000', 'P(i,k)', '<n,m||e,f>', 't2(e,b,j,m)', 't2(f,c,k,l)', 't2(a,d,i,n)']
+['+1.00000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,b,j,m)', 't2(f,c,i,k)', 't2(a,d,l,n)']
+['-1.00000000000000', 'P(j,k)', '<n,m||e,f>', 't2(e,b,i,m)', 't2(f,c,k,l)', 't2(a,d,j,n)']
+['+1.00000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,b,k,l)', 't2(f,c,j,m)', 't2(a,d,i,n)']
+['-0.50000000000000', 'P(j,k)', '<n,m||e,f>', 't2(e,b,k,l)', 't2(f,c,i,j)', 't2(a,d,n,m)']
+['-1.00000000000000', 'P(i,k)', '<n,m||e,f>', 't2(e,b,j,l)', 't2(f,c,k,m)', 't2(a,d,i,n)']
+['+1.00000000000000', 'P(j,k)', '<n,m||e,f>', 't2(e,b,i,l)', 't2(f,c,k,m)', 't2(a,d,j,n)']
+['-0.50000000000000', 'P(k,l)', '<n,m||e,f>', 't2(e,b,i,l)', 't2(f,c,j,k)', 't2(a,d,n,m)']
+['+1.00000000000000', 'P(i,l)', '<n,m||e,f>', 't2(e,b,j,k)', 't2(f,c,l,m)', 't2(a,d,i,n)']
+['-0.50000000000000', 'P(i,k)', '<n,m||e,f>', 't2(e,b,j,k)', 't2(f,c,i,l)', 't2(a,d,n,m)']
+['-1.00000000000000', 'P(j,l)', '<n,m||e,f>', 't2(e,b,i,k)', 't2(f,c,l,m)', 't2(a,d,j,n)']
+['+1.00000000000000', 'P(k,l)', '<n,m||e,f>', 't2(e,b,i,j)', 't2(f,c,l,m)', 't2(a,d,k,n)']
+['+1.00000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,c,l,m)', 't2(f,d,j,k)', 't2(a,b,i,n)']
+['+1.00000000000000', 'P(k,l)', '<n,m||e,f>', 't2(e,c,l,m)', 't2(f,d,i,j)', 't2(a,b,k,n)']
+['-1.00000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,c,k,m)', 't2(f,d,j,l)', 't2(a,b,i,n)']
+['+1.00000000000000', 'P(i,k)', '<n,m||e,f>', 't2(e,c,j,m)', 't2(f,d,k,l)', 't2(a,b,i,n)']
+['+1.00000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,c,j,m)', 't2(f,d,i,k)', 't2(a,b,l,n)']
+['-1.00000000000000', 'P(j,k)', '<n,m||e,f>', 't2(e,c,i,m)', 't2(f,d,k,l)', 't2(a,b,j,n)']
+['+1.00000000000000', 'P(i,j)', '<n,m||e,f>', 't2(e,c,k,l)', 't2(f,d,j,m)', 't2(a,b,i,n)']
+['-0.50000000000000', 'P(j,k)', '<n,m||e,f>', 't2(e,c,k,l)', 't2(f,d,i,j)', 't2(a,b,n,m)']
+['-1.00000000000000', 'P(i,k)', '<n,m||e,f>', 't2(e,c,j,l)', 't2(f,d,k,m)', 't2(a,b,i,n)']
+['+1.00000000000000', 'P(j,k)', '<n,m||e,f>', 't2(e,c,i,l)', 't2(f,d,k,m)', 't2(a,b,j,n)']
+['-0.50000000000000', 'P(k,l)', '<n,m||e,f>', 't2(e,c,i,l)', 't2(f,d,j,k)', 't2(a,b,n,m)']
+['+1.00000000000000', 'P(i,l)', '<n,m||e,f>', 't2(e,c,j,k)', 't2(f,d,l,m)', 't2(a,b,i,n)']
+['-0.50000000000000', 'P(i,k)', '<n,m||e,f>', 't2(e,c,j,k)', 't2(f,d,i,l)', 't2(a,b,n,m)']
+['-1.00000000000000', 'P(j,l)', '<n,m||e,f>', 't2(e,c,i,k)', 't2(f,d,l,m)', 't2(a,b,j,n)']
+['+1.00000000000000', 'P(k,l)', '<n,m||e,f>', 't2(e,c,i,j)', 't2(f,d,l,m)', 't2(a,b,k,n)']
+['+1.00000000000000', 'P(j,k)', 'P(a,b)', '<m,a||k,l>', 't3(b,c,d,i,j,m)']
+['+1.00000000000000', 'P(k,l)', 'P(a,b)', '<m,a||i,l>', 't3(b,c,d,j,k,m)']
+['+1.00000000000000', 'P(i,k)', 'P(a,b)', '<m,a||j,k>', 't3(b,c,d,i,l,m)']
+['+1.00000000000000', 'P(j,k)', 'P(c,d)', '<m,c||k,l>', 't3(a,b,d,i,j,m)']
+['+1.00000000000000', 'P(k,l)', 'P(c,d)', '<m,c||i,l>', 't3(a,b,d,j,k,m)']
+['+1.00000000000000', 'P(i,k)', 'P(c,d)', '<m,c||j,k>', 't3(a,b,d,i,l,m)']
+['+1.00000000000000', 'P(k,l)', 'P(b,c)', '<a,b||e,l>', 't3(e,c,d,i,j,k)']
+['+1.00000000000000', 'P(i,j)', 'P(b,c)', '<a,b||e,j>', 't3(e,c,d,i,k,l)']
+['+1.00000000000000', 'P(k,l)', 'P(a,b)', '<a,d||e,l>', 't3(e,b,c,i,j,k)']
+['+1.00000000000000', 'P(i,j)', 'P(a,b)', '<a,d||e,j>', 't3(e,b,c,i,k,l)']
+['+1.00000000000000', 'P(k,l)', 'P(b,d)', '<b,c||e,l>', 't3(e,a,d,i,j,k)']
+['+1.00000000000000', 'P(i,j)', 'P(b,d)', '<b,c||e,j>', 't3(e,a,d,i,k,l)']
+#	 -0.5000 P(i,j)*P(b,c)<n,m||e,f>*t2(e,f,k,l)*t2(a,b,j,m)*t2(c,d,i,n)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,efkl,abjm,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdjikl', contracted_intermediate) 
+
+#	 -0.5000 P(i,j)<n,m||e,f>*t2(e,f,k,l)*t2(a,d,j,m)*t2(b,c,i,n)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,efkl,adjm,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	  0.5000 P(i,k)*P(b,c)<n,m||e,f>*t2(e,f,j,l)*t2(a,b,k,m)*t2(c,d,i,n)
+contracted_intermediate =  0.500000000000000 * einsum('nmef,efjl,abkm,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdkjil', contracted_intermediate) 
+
+#	  0.5000 P(i,k)<n,m||e,f>*t2(e,f,j,l)*t2(a,d,k,m)*t2(b,c,i,n)
+contracted_intermediate =  0.500000000000000 * einsum('nmef,efjl,adkm,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate) 
+
+#	 -0.5000 P(j,k)*P(b,c)<n,m||e,f>*t2(e,f,i,l)*t2(a,b,k,m)*t2(c,d,j,n)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,efil,abkm,cdjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdikjl', contracted_intermediate) 
+
+#	 -0.5000 P(j,k)<n,m||e,f>*t2(e,f,i,l)*t2(a,d,k,m)*t2(b,c,j,n)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,efil,adkm,bcjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate) 
+
+#	 -0.5000 P(i,l)*P(b,c)<n,m||e,f>*t2(e,f,j,k)*t2(a,b,l,m)*t2(c,d,i,n)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,efjk,ablm,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdljki', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdljki', contracted_intermediate) 
+
+#	 -0.5000 P(i,l)<n,m||e,f>*t2(e,f,j,k)*t2(a,d,l,m)*t2(b,c,i,n)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,efjk,adlm,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdljki', contracted_intermediate) 
+
+#	  0.5000 P(j,l)*P(b,c)<n,m||e,f>*t2(e,f,i,k)*t2(a,b,l,m)*t2(c,d,j,n)
+contracted_intermediate =  0.500000000000000 * einsum('nmef,efik,ablm,cdjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdilkj', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdilkj', contracted_intermediate) 
+
+#	  0.5000 P(j,l)<n,m||e,f>*t2(e,f,i,k)*t2(a,d,l,m)*t2(b,c,j,n)
+contracted_intermediate =  0.500000000000000 * einsum('nmef,efik,adlm,bcjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdilkj', contracted_intermediate) 
+
+#	 -0.5000 P(k,l)*P(b,c)<n,m||e,f>*t2(e,f,i,j)*t2(a,b,l,m)*t2(c,d,k,n)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,efij,ablm,cdkn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdijlk', contracted_intermediate) 
+
+#	 -0.5000 P(k,l)<n,m||e,f>*t2(e,f,i,j)*t2(a,d,l,m)*t2(b,c,k,n)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,efij,adlm,bckn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(b,c)<n,m||e,f>*t2(e,a,l,m)*t2(f,b,j,k)*t2(c,d,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ealm,fbjk,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdjikl', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(b,c)<n,m||e,f>*t2(e,a,l,m)*t2(f,b,i,j)*t2(c,d,k,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ealm,fbij,cdkn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(a,b)<n,m||e,f>*t2(e,a,l,m)*t2(f,d,j,k)*t2(b,c,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ealm,fdjk,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdjikl', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(a,b)<n,m||e,f>*t2(e,a,l,m)*t2(f,d,i,j)*t2(b,c,k,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ealm,fdij,bckn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdijlk', contracted_intermediate) 
+
+#	 -1.0000 P(i,j)*P(b,c)<n,m||e,f>*t2(e,a,k,m)*t2(f,b,j,l)*t2(c,d,i,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eakm,fbjl,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdjikl', contracted_intermediate) 
+
+#	 -1.0000 P(i,j)*P(a,b)<n,m||e,f>*t2(e,a,k,m)*t2(f,d,j,l)*t2(b,c,i,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eakm,fdjl,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdjikl', contracted_intermediate) 
+
+#	  1.0000 P(i,k)*P(b,c)<n,m||e,f>*t2(e,a,j,m)*t2(f,b,k,l)*t2(c,d,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eajm,fbkl,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdkjil', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(b,c)<n,m||e,f>*t2(e,a,j,m)*t2(f,b,i,k)*t2(c,d,l,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eajm,fbik,cdln->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdjikl', contracted_intermediate) 
+
+#	  1.0000 P(i,k)*P(a,b)<n,m||e,f>*t2(e,a,j,m)*t2(f,d,k,l)*t2(b,c,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eajm,fdkl,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdkjil', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(a,b)<n,m||e,f>*t2(e,a,j,m)*t2(f,d,i,k)*t2(b,c,l,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eajm,fdik,bcln->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdjikl', contracted_intermediate) 
+
+#	 -1.0000 P(j,k)*P(b,c)<n,m||e,f>*t2(e,a,i,m)*t2(f,b,k,l)*t2(c,d,j,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eaim,fbkl,cdjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdikjl', contracted_intermediate) 
+
+#	 -1.0000 P(j,k)*P(a,b)<n,m||e,f>*t2(e,a,i,m)*t2(f,d,k,l)*t2(b,c,j,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eaim,fdkl,bcjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdikjl', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(b,c)<n,m||e,f>*t2(e,a,k,l)*t2(f,b,j,m)*t2(c,d,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eakl,fbjm,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdjikl', contracted_intermediate) 
+
+#	 -0.5000 P(j,k)*P(b,c)<n,m||e,f>*t2(e,a,k,l)*t2(f,b,i,j)*t2(c,d,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,eakl,fbij,cdnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdikjl', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(a,b)<n,m||e,f>*t2(e,a,k,l)*t2(f,d,j,m)*t2(b,c,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eakl,fdjm,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdjikl', contracted_intermediate) 
+
+#	 -0.5000 P(j,k)*P(a,b)<n,m||e,f>*t2(e,a,k,l)*t2(f,d,i,j)*t2(b,c,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,eakl,fdij,bcnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdikjl', contracted_intermediate) 
+
+#	 -1.0000 P(i,k)*P(b,c)<n,m||e,f>*t2(e,a,j,l)*t2(f,b,k,m)*t2(c,d,i,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eajl,fbkm,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdkjil', contracted_intermediate) 
+
+#	 -1.0000 P(i,k)*P(a,b)<n,m||e,f>*t2(e,a,j,l)*t2(f,d,k,m)*t2(b,c,i,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eajl,fdkm,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdkjil', contracted_intermediate) 
+
+#	  1.0000 P(j,k)*P(b,c)<n,m||e,f>*t2(e,a,i,l)*t2(f,b,k,m)*t2(c,d,j,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eail,fbkm,cdjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdikjl', contracted_intermediate) 
+
+#	 -0.5000 P(k,l)*P(b,c)<n,m||e,f>*t2(e,a,i,l)*t2(f,b,j,k)*t2(c,d,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,eail,fbjk,cdnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdijlk', contracted_intermediate) 
+
+#	  1.0000 P(j,k)*P(a,b)<n,m||e,f>*t2(e,a,i,l)*t2(f,d,k,m)*t2(b,c,j,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eail,fdkm,bcjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdikjl', contracted_intermediate) 
+
+#	 -0.5000 P(k,l)*P(a,b)<n,m||e,f>*t2(e,a,i,l)*t2(f,d,j,k)*t2(b,c,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,eail,fdjk,bcnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,l)*P(b,c)<n,m||e,f>*t2(e,a,j,k)*t2(f,b,l,m)*t2(c,d,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eajk,fblm,cdin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdljki', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdljki', contracted_intermediate) 
+
+#	 -0.5000 P(i,k)*P(b,c)<n,m||e,f>*t2(e,a,j,k)*t2(f,b,i,l)*t2(c,d,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,eajk,fbil,cdnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdkjil', contracted_intermediate) 
+
+#	  1.0000 P(i,l)*P(a,b)<n,m||e,f>*t2(e,a,j,k)*t2(f,d,l,m)*t2(b,c,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eajk,fdlm,bcin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdljki', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdljki', contracted_intermediate) 
+
+#	 -0.5000 P(i,k)*P(a,b)<n,m||e,f>*t2(e,a,j,k)*t2(f,d,i,l)*t2(b,c,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,eajk,fdil,bcnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdkjil', contracted_intermediate) 
+
+#	 -1.0000 P(j,l)*P(b,c)<n,m||e,f>*t2(e,a,i,k)*t2(f,b,l,m)*t2(c,d,j,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eaik,fblm,cdjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdilkj', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdilkj', contracted_intermediate) 
+
+#	 -1.0000 P(j,l)*P(a,b)<n,m||e,f>*t2(e,a,i,k)*t2(f,d,l,m)*t2(b,c,j,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eaik,fdlm,bcjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdilkj', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdilkj', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(b,c)<n,m||e,f>*t2(e,a,i,j)*t2(f,b,l,m)*t2(c,d,k,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eaij,fblm,cdkn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdijlk', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(a,b)<n,m||e,f>*t2(e,a,i,j)*t2(f,d,l,m)*t2(b,c,k,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eaij,fdlm,bckn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,j)<n,m||e,f>*t2(e,b,l,m)*t2(f,c,j,k)*t2(a,d,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eblm,fcjk,adin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	  1.0000 P(k,l)<n,m||e,f>*t2(e,b,l,m)*t2(f,c,i,j)*t2(a,d,k,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eblm,fcij,adkn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate) 
+
+#	 -1.0000 P(i,j)<n,m||e,f>*t2(e,b,k,m)*t2(f,c,j,l)*t2(a,d,i,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,ebkm,fcjl,adin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	  1.0000 P(i,k)<n,m||e,f>*t2(e,b,j,m)*t2(f,c,k,l)*t2(a,d,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ebjm,fckl,adin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate) 
+
+#	  1.0000 P(i,j)<n,m||e,f>*t2(e,b,j,m)*t2(f,c,i,k)*t2(a,d,l,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ebjm,fcik,adln->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	 -1.0000 P(j,k)<n,m||e,f>*t2(e,b,i,m)*t2(f,c,k,l)*t2(a,d,j,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,ebim,fckl,adjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate) 
+
+#	  1.0000 P(i,j)<n,m||e,f>*t2(e,b,k,l)*t2(f,c,j,m)*t2(a,d,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ebkl,fcjm,adin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	 -0.5000 P(j,k)<n,m||e,f>*t2(e,b,k,l)*t2(f,c,i,j)*t2(a,d,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,ebkl,fcij,adnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate) 
+
+#	 -1.0000 P(i,k)<n,m||e,f>*t2(e,b,j,l)*t2(f,c,k,m)*t2(a,d,i,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,ebjl,fckm,adin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate) 
+
+#	  1.0000 P(j,k)<n,m||e,f>*t2(e,b,i,l)*t2(f,c,k,m)*t2(a,d,j,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ebil,fckm,adjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate) 
+
+#	 -0.5000 P(k,l)<n,m||e,f>*t2(e,b,i,l)*t2(f,c,j,k)*t2(a,d,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,ebil,fcjk,adnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,l)<n,m||e,f>*t2(e,b,j,k)*t2(f,c,l,m)*t2(a,d,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ebjk,fclm,adin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdljki', contracted_intermediate) 
+
+#	 -0.5000 P(i,k)<n,m||e,f>*t2(e,b,j,k)*t2(f,c,i,l)*t2(a,d,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,ebjk,fcil,adnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate) 
+
+#	 -1.0000 P(j,l)<n,m||e,f>*t2(e,b,i,k)*t2(f,c,l,m)*t2(a,d,j,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,ebik,fclm,adjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdilkj', contracted_intermediate) 
+
+#	  1.0000 P(k,l)<n,m||e,f>*t2(e,b,i,j)*t2(f,c,l,m)*t2(a,d,k,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ebij,fclm,adkn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,j)<n,m||e,f>*t2(e,c,l,m)*t2(f,d,j,k)*t2(a,b,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eclm,fdjk,abin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	  1.0000 P(k,l)<n,m||e,f>*t2(e,c,l,m)*t2(f,d,i,j)*t2(a,b,k,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eclm,fdij,abkn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate) 
+
+#	 -1.0000 P(i,j)<n,m||e,f>*t2(e,c,k,m)*t2(f,d,j,l)*t2(a,b,i,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,eckm,fdjl,abin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	  1.0000 P(i,k)<n,m||e,f>*t2(e,c,j,m)*t2(f,d,k,l)*t2(a,b,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ecjm,fdkl,abin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate) 
+
+#	  1.0000 P(i,j)<n,m||e,f>*t2(e,c,j,m)*t2(f,d,i,k)*t2(a,b,l,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ecjm,fdik,abln->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	 -1.0000 P(j,k)<n,m||e,f>*t2(e,c,i,m)*t2(f,d,k,l)*t2(a,b,j,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,ecim,fdkl,abjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate) 
+
+#	  1.0000 P(i,j)<n,m||e,f>*t2(e,c,k,l)*t2(f,d,j,m)*t2(a,b,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,eckl,fdjm,abin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate) 
+
+#	 -0.5000 P(j,k)<n,m||e,f>*t2(e,c,k,l)*t2(f,d,i,j)*t2(a,b,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,eckl,fdij,abnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate) 
+
+#	 -1.0000 P(i,k)<n,m||e,f>*t2(e,c,j,l)*t2(f,d,k,m)*t2(a,b,i,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,ecjl,fdkm,abin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate) 
+
+#	  1.0000 P(j,k)<n,m||e,f>*t2(e,c,i,l)*t2(f,d,k,m)*t2(a,b,j,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ecil,fdkm,abjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate) 
+
+#	 -0.5000 P(k,l)<n,m||e,f>*t2(e,c,i,l)*t2(f,d,j,k)*t2(a,b,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,ecil,fdjk,abnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,l)<n,m||e,f>*t2(e,c,j,k)*t2(f,d,l,m)*t2(a,b,i,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ecjk,fdlm,abin->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdljki', contracted_intermediate) 
+
+#	 -0.5000 P(i,k)<n,m||e,f>*t2(e,c,j,k)*t2(f,d,i,l)*t2(a,b,n,m)
+contracted_intermediate = -0.500000000000000 * einsum('nmef,ecjk,fdil,abnm->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 3), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate) 
+
+#	 -1.0000 P(j,l)<n,m||e,f>*t2(e,c,i,k)*t2(f,d,l,m)*t2(a,b,j,n)
+contracted_intermediate = -1.000000000000000 * einsum('nmef,ecik,fdlm,abjn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdilkj', contracted_intermediate) 
+
+#	  1.0000 P(k,l)<n,m||e,f>*t2(e,c,i,j)*t2(f,d,l,m)*t2(a,b,k,n)
+contracted_intermediate =  1.000000000000000 * einsum('nmef,ecij,fdlm,abkn->abcdijkl', g[o, o, v, v], t2, t2, t2, optimize=['einsum_path', (0, 2), (0, 2), (0, 1)])
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate) 
+
+#	  1.0000 P(j,k)*P(a,b)<m,a||k,l>*t3(b,c,d,i,j,m)
+contracted_intermediate =  1.000000000000000 * einsum('makl,bcdijm->abcdijkl', g[o, v, o, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdikjl', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(a,b)<m,a||i,l>*t3(b,c,d,j,k,m)
+contracted_intermediate =  1.000000000000000 * einsum('mail,bcdjkm->abcdijkl', g[o, v, o, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,k)*P(a,b)<m,a||j,k>*t3(b,c,d,i,l,m)
+contracted_intermediate =  1.000000000000000 * einsum('majk,bcdilm->abcdijkl', g[o, v, o, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdkjil', contracted_intermediate) 
+
+#	  1.0000 P(j,k)*P(c,d)<m,c||k,l>*t3(a,b,d,i,j,m)
+contracted_intermediate =  1.000000000000000 * einsum('mckl,abdijm->abcdijkl', g[o, v, o, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdikjl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->abdcijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->abdcikjl', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(c,d)<m,c||i,l>*t3(a,b,d,j,k,m)
+contracted_intermediate =  1.000000000000000 * einsum('mcil,abdjkm->abcdijkl', g[o, v, o, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->abdcijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->abdcijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,k)*P(c,d)<m,c||j,k>*t3(a,b,d,i,l,m)
+contracted_intermediate =  1.000000000000000 * einsum('mcjk,abdilm->abcdijkl', g[o, v, o, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdkjil', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->abdcijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->abdckjil', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(b,c)<a,b||e,l>*t3(e,c,d,i,j,k)
+contracted_intermediate =  1.000000000000000 * einsum('abel,ecdijk->abcdijkl', g[v, v, v, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(b,c)<a,b||e,j>*t3(e,c,d,i,k,l)
+contracted_intermediate =  1.000000000000000 * einsum('abej,ecdikl->abcdijkl', g[v, v, v, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->acbdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->acbdjikl', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(a,b)<a,d||e,l>*t3(e,b,c,i,j,k)
+contracted_intermediate =  1.000000000000000 * einsum('adel,ebcijk->abcdijkl', g[v, v, v, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(a,b)<a,d||e,j>*t3(e,b,c,i,k,l)
+contracted_intermediate =  1.000000000000000 * einsum('adej,ebcikl->abcdijkl', g[v, v, v, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->bacdijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->bacdjikl', contracted_intermediate) 
+
+#	  1.0000 P(k,l)*P(b,d)<b,c||e,l>*t3(e,a,d,i,j,k)
+contracted_intermediate =  1.000000000000000 * einsum('bcel,eadijk->abcdijkl', g[v, v, v, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdijlk', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->adcbijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->adcbijlk', contracted_intermediate) 
+
+#	  1.0000 P(i,j)*P(b,d)<b,c||e,j>*t3(e,a,d,i,k,l)
+contracted_intermediate =  1.000000000000000 * einsum('bcej,eadikl->abcdijkl', g[v, v, v, o], t3)
+quad_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abcdijkl->abcdjikl', contracted_intermediate)  + -1.00000 * einsum('abcdijkl->adcbijkl', contracted_intermediate)  +  1.00000 * einsum('abcdijkl->adcbjikl', contracted_intermediate) 
+
+
+    < 0 | i* j* b a e(-T) H e(T) | 0> :
+
+AUGMENTED T2 RESIDUAL EQUATIONS, WITH WN(T2^2) CONTRIBUTION
+['-1.00000000000000', 'P(i,j)', 'f(k,j)', 't2(a,b,i,k)']
+['+1.00000000000000', 'P(a,b)', 'f(a,c)', 't2(c,b,i,j)']
+['+1.00000000000000', '<a,b||i,j>']
+['+0.50000000000000', '<l,k||i,j>', 't2(a,b,l,k)']
+['+1.00000000000000', 'P(i,j)', 'P(a,b)', '<k,a||c,j>', 't2(c,b,i,k)']
+['+0.50000000000000', '<a,b||c,d>', 't2(c,d,i,j)']
+['-0.50000000000000', 'P(i,j)', '<l,k||c,d>', 't2(c,d,j,k)', 't2(a,b,i,l)']
+['+0.25000000000000', '<l,k||c,d>', 't2(c,d,i,j)', 't2(a,b,l,k)']
+['-0.50000000000000', '<l,k||c,d>', 't2(c,a,l,k)', 't2(d,b,i,j)']
+['+1.00000000000000', 'P(i,j)', '<l,k||c,d>', 't2(c,a,j,k)', 't2(d,b,i,l)']
+['-0.50000000000000', '<l,k||c,d>', 't2(c,a,i,j)', 't2(d,b,l,k)']
+['+0.25000000000000', '<l,k||c,d>', 't4(c,d,a,b,i,j,l,k)']
+#	 -1.0000 P(i,j)f(k,j)*t2(a,b,i,k)
+contracted_intermediate = -1.000000000000000 * einsum('kj,abik->abij', f[o, o], t2)
+double_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abij->abji', contracted_intermediate) 
+
+#	  1.0000 P(a,b)f(a,c)*t2(c,b,i,j)
+contracted_intermediate =  1.000000000000000 * einsum('ac,cbij->abij', f[v, v], t2)
+double_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abij->baij', contracted_intermediate) 
+
+#	  1.0000 <a,b||i,j>
+double_res +=  1.000000000000000 * einsum('abij->abij', g[v, v, o, o])
+
+#	  0.5000 <l,k||i,j>*t2(a,b,l,k)
+double_res +=  0.500000000000000 * einsum('lkij,ablk->abij', g[o, o, o, o], t2)
+
+#	  1.0000 P(i,j)*P(a,b)<k,a||c,j>*t2(c,b,i,k)
+contracted_intermediate =  1.000000000000000 * einsum('kacj,cbik->abij', g[o, v, v, o], t2)
+double_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abij->abji', contracted_intermediate)  + -1.00000 * einsum('abij->baij', contracted_intermediate)  +  1.00000 * einsum('abij->baji', contracted_intermediate) 
+
+#	  0.5000 <a,b||c,d>*t2(c,d,i,j)
+double_res +=  0.500000000000000 * einsum('abcd,cdij->abij', g[v, v, v, v], t2)
+
+#	 -0.5000 P(i,j)<l,k||c,d>*t2(c,d,j,k)*t2(a,b,i,l)
+contracted_intermediate = -0.500000000000000 * einsum('lkcd,cdjk,abil->abij', g[o, o, v, v], t2, t2, optimize=['einsum_path', (0, 1), (0, 1)])
+double_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abij->abji', contracted_intermediate) 
+
+#	  0.2500 <l,k||c,d>*t2(c,d,i,j)*t2(a,b,l,k)
+double_res +=  0.250000000000000 * einsum('lkcd,cdij,ablk->abij', g[o, o, v, v], t2, t2, optimize=['einsum_path', (0, 1), (0, 1)])
+
+#	 -0.5000 <l,k||c,d>*t2(c,a,l,k)*t2(d,b,i,j)
+double_res += -0.500000000000000 * einsum('lkcd,calk,dbij->abij', g[o, o, v, v], t2, t2, optimize=['einsum_path', (0, 1), (0, 1)])
+
+#	  1.0000 P(i,j)<l,k||c,d>*t2(c,a,j,k)*t2(d,b,i,l)
+contracted_intermediate =  1.000000000000000 * einsum('lkcd,cajk,dbil->abij', g[o, o, v, v], t2, t2, optimize=['einsum_path', (0, 1), (0, 1)])
+double_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abij->abji', contracted_intermediate) 
+
+#	 -0.5000 <l,k||c,d>*t2(c,a,i,j)*t2(d,b,l,k)
+double_res += -0.500000000000000 * einsum('lkcd,caij,dblk->abij', g[o, o, v, v], t2, t2, optimize=['einsum_path', (0, 2), (0, 1)])
+
+#	  0.2500 <l,k||c,d>*t4(c,d,a,b,i,j,l,k)
+double_res +=  0.250000000000000 * einsum('lkcd,cdabijlk->abij', g[o, o, v, v], t4[:, :, :, :, :, :, :, :])
+

@@ -1106,7 +1106,7 @@ def main():
     resid_t4=Qf.get_t4(t2f,t3f,g,o,v)
     print('done with resid quads')
     print(flush=True)
-    t4=resid_t4*e_abcdijkl
+    t4=resid_t4#*e_abcdijkl
     print('constructed full t4')
     l2=t2f.transpose(2,3,0,1)
     e_Qf=Qf.Qf_corr(l2,t4,g,o,v)

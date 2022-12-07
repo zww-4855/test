@@ -123,7 +123,7 @@ def singles_residual(t1, t2, t3, f, g, o, v):
     return singles_res
 
 
-def doubles_residual(t1, t2, t3, f, g, o, v):
+def doubles_residual(t1, t2, t3, f, g, o, v,e_ijab):
     """
      < 0 | m* n* f e e(-T) H e(T) | 0>
 
@@ -276,6 +276,18 @@ def doubles_residual(t1, t2, t3, f, g, o, v):
     
     #	  1.0000 <l,k||c,d>*t1(c,j)*t1(d,i)*t1(a,k)*t1(b,l)
     doubles_res += 1.0 * einsum('lkcd,cj,di,ak,bl->abij', g[o, o, v, v], t1, t1, t1, t1, optimize=['einsum_path', (0, 1), (0, 3), (0, 2), (0, 1)])
+
+
+    if e_ijab is None:
+        return doubles_res
+
+    t4tmp=np.zeros((nsvirt, nsvirt,nsvirt,nsvirt,nsocc, nsocc,nsocc,nsocc))
+    t4tmp=Qf.get_t4(t2,t3,g,o,v,f)
+    
+    t4_into_t2=np.zeros((nsvirt,nsvirt,nsocc,nsocc))
+    t4_into_t2=0.250000000000000 * einsum('lkcd,cdabijlk->abij', g[o, o, v, v], t4tmp[:, :, :, :, :, :, :, :])
+
+    doubles_res+=t4_into_t2*e_ijab
     return doubles_res
 
 def triples_residual(t1, t2, t3, f, g, o, v):
@@ -981,7 +993,7 @@ def kernel(t1, t2, t3, fock, g, o, v, e_ai, e_abij, e_abcijk, hf_energy, max_ite
     for idx in range(max_iter):
 
         residual_singles = singles_residual(t1, t2, t3, fock, g, o, v)
-        residual_doubles = doubles_residual(t1, t2, t3, fock, g, o, v)
+        residual_doubles = doubles_residual(t1, t2, t3, fock, g, o, v,e_abij)
         residual_triples = triples_residual(t1, t2, t3, fock, g, o, v)
 
         res_norm = np.linalg.norm(residual_singles) + np.linalg.norm(residual_doubles) + np.linalg.norm(residual_triples)
@@ -1054,8 +1066,10 @@ def main():
     nele = int(sum(occ))
     nocc = nele // 2
     norbs = oei.shape[0]
+    global nsvirt, nsocc
     nsvirt = 2 * (norbs - nocc)
     nsocc = 2 * nocc
+
 
     soei, stei = spinorb_from_spatial(oei, tei)
     astei = np.einsum('ijkl', stei) - np.einsum('ijlk', stei)
@@ -1099,14 +1113,14 @@ def main():
     print(flush=True)
     en = cc_energy(t1f, t2f, fock, g, o, v) 
     print("")
-    print("    CCSDT Correlation Energy: {: 20.12f}".format(en - hf_energy))
-    print("    CCSDT Total Energy:       {: 20.12f}".format(en + molecule.nuclear_repulsion))
+    print("    CCSDTQf-1 Correlation Energy: {: 20.12f}".format(en - hf_energy))
+    print("    CCSDTQf-1 Total Energy:       {: 20.12f}".format(en + molecule.nuclear_repulsion))
     print("")
     print(flush=True)
-    resid_t4=Qf.get_t4(t2f,t3f,g,o,v)
+    resid_t4=Qf.get_t4(t2f,t3f,g,o,v,None)
     print('done with resid quads')
     print(flush=True)
-    t4=resid_t4*e_abcdijkl
+    t4=resid_t4 #*e_abcdijkl
     print('constructed full t4')
     l2=t2f.transpose(2,3,0,1)
     e_Qf=Qf.Qf_corr(l2,t4,g,o,v)
@@ -1115,6 +1129,14 @@ def main():
     print(flush=True)
 
 
+    print('IF DENOM. IS LEFT IN TO DEFINE NEW T4')
+    t4=resid_t4*e_abcdijkl
+    print('constructed full t4')
+    l2=t2f.transpose(2,3,0,1)
+    e_Qf=Qf.Qf_corr(l2,t4,g,o,v)
+    print('Qf correction: ', e_Qf)
+    print('Total correlation energy for CCSDT(Qf), should match to ACESII:',e_Qf+(en - hf_energy))
+    print(flush=True)
 
 if __name__ == "__main__":
     main()
