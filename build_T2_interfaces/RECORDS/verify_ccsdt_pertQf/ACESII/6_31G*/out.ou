@@ -1,0 +1,2357 @@
+ The value of HAVEGEOM record:                     0
+ The value of PES_SCAN record:                     0
+ The OPTARC is here? F F
+ Do we have geom? F
+ Hessian in JOBARC?                    -1
+
+
+                      ACES STATE VARIABLE REGISTRATION LOG
+     ----------------------------------------------------------------------
+     The ACES State Variables were initialized.
+     Updating (REFERENCE,RHF): 'RHF' converts to 'RHF' -> 0
+     Updating (CALCLEVEL,CCSDT): 'CCSDT' converts to 'CCSDT' -> 18
+     Updating (BASIS,6-31G*): String copy succeeded.
+     Updating (MEMORY_SIZE,2gb): 15000000 -> 268435456
+     Updating (CC_EXPORDER,20): 0 -> 20
+     ----------------------------------------------------------------------
+
+
+                       ACES STATE VARIABLE VALIDATION LOG
+     ----------------------------------------------------------------------
+     Updating (COORDINATES,CARTESIAN): 'CARTESIAN' converts to 'CARTESIAN' -> 1
+ A geometry for frequency {0,1} present:                    -1
+     Updating (PROGRAM,aces2): 'aces2' converts to 'ACES2' -> 2
+ The value of grad calc                     0
+ The Deriv. level, havegeom?, and vib? :                    -1
+                     0                     0                     0
+ The derivative level @exit                    -1
+     Updating (DERIV_LEV,zero): 'zero' converts to 'OFF' -> 0
+     Updating (TAMP_SUM,5): 0 -> 5
+ First order props and grad flags @enter:                     0
+                     0
+ First order props, deriv level and grad_calc @exit:                     0
+                     0                     0
+     Updating (ORBITALS,standard): 'standard' converts to 'STANDARD' -> 0
+     Updating (ESTATE_TOL,5): -1 -> 5
+     Updating (RESTART,0): '0' converts to 'OFF' -> 0
+     Updating (HBARABCD,OFF): 'OFF' converts to 'OFF' -> 1
+     Updating (HBARABCI,OFF): 'OFF' converts to 'OFF' -> 1
+     Updating (ABCDFULL,ON): 'ON' converts to 'ON' -> 1
+     Updating (CACHE_RECS,102): -1 -> 102
+     Updating (FILE_RECSIZ,131072): -1 -> 131072
+     ----------------------------------------------------------------------
+
+          ASV#   ASV KEY DEFINITION =    CURRENT [   DEFAULT] UNITS
+          ------------------------------------------------------------
+            1:                PRINT =          0 [         0] 
+            2:            CALCLEVEL =         18 [         0] 
+            3:            DERIV_LEV =          0 [        -1] 
+            4:              CC_CONV =          7 [         7] (tol)
+
+            5:             SCF_CONV =          7 [         7] (tol)
+            6:            XFORM_TOL =         11 [        11] (tol)
+            7:            CC_MAXCYC =         50 [        50] cycles
+            8:           LINDEP_TOL =          8 [         8] 
+
+            9:                  RDO =         -1 [        -1] 
+           10:           SCF_EXTRAP =          1 [         1] 
+           11:            REFERENCE =          0 [         0] 
+           12:          CC_EXPORDER =         20 [         0] 
+
+           13:             TAMP_SUM =          5 [         0] 
+           14:            NTOP_TAMP =         15 [        15] 
+           15:              DAMPSCF =         20 [        20] x 0.01
+           16:           SCF_MAXCYC =        150 [       150] cycles
+
+           18:                PROPS =          0 [         0] 
+           19:              DENSITY =          0 [         0] 
+           20:          SCF_EXPORDE =          6 [         6] 
+           21:          CC_EXTRAPOL =          1 [         1] 
+
+           22:            BRUECKNER =          0 [         0] 
+           23:               XFIELD =          0 [         0] x 10-6
+           24:               YFIELD =          0 [         0] x 10-6
+           25:               ZFIELD =          0 [         0] x 10-6
+
+           26:            SAVE_INTS =          0 [         0] 
+           28:               CHARGE =          0 [         0] 
+           29:          MULTIPLICTY =          1 [         1] 
+           30:          CPHF_CONVER =         12 [        12] (tol)
+
+           31:          CPHF_MAXCYC =         64 [        64] cycles
+           35:               INCORE =          0 [         0] 
+           36:          MEMORY_SIZE =  268435456 [  15000000] Words
+           37:          FILE_RECSIZ =     131072 [        -1] Words
+
+           38:                NONHF =          0 [         0] 
+           39:             ORBITALS =          0 [        -1] 
+           40:          SCF_EXPSTAR =          8 [         8] 
+           41:          LOCK_ORBOCC =          0 [         0] 
+
+           42:          FILE_STRIPE =          0 [         0] 
+           43:               DOHBAR =          0 [         0] 
+           44:           CACHE_RECS =        102 [        -1] 
+           45:                GUESS =          0 [         0] 
+
+           46:           JODA_PRINT =          0 [         0] 
+           47:           OPT_METHOD =          0 [         0] 
+           48:          CONVERGENCE =          4 [         4] H/bohr
+           49:          EIGENVECTOR =          1 [         1] 
+
+           50:              NEGEVAL =          2 [         2] 
+           51:          CURVILINEAR =          0 [         0] 
+           52:          STP_SIZ_CTL =          0 [         0] 
+           53:             MAX_STEP =        300 [       300] millibohr
+
+           54:            VIBRATION =          0 [         0] 
+           55:            EVAL_HESS =         -1 [        -1] # of cyc.
+           56:            INTEGRALS =          1 [         1] 
+           57:          FD_STEPSIZE =          0 [         0] 10-4 bohr
+
+           58:               POINTS =          0 [         0] 
+           59:          CONTRACTION =          1 [         1] 
+           60:             SYMMETRY =          2 [         2] 
+           62:            SPHERICAL =          1 [         1] 
+
+           63:          RESET_FLAGS =          0 [         0] 
+           64:             PERT_ORB =          2 [         2] 
+           65:             GENBAS_1 =          0 [         0] 
+           66:             GENBAS_2 =          0 [         0] 
+
+           67:             GENBAS_3 =          0 [         0] 
+           68:          COORDINATES =          1 [         3] 
+           69:            CHECK_SYM =          1 [         1] 
+           70:            SCF_PRINT =          0 [         0] 
+
+           71:                  ECP =          0 [         0] 
+           72:              RESTART =          0 [         1] 
+           73:            TRANS_INV =          0 [         0] 
+           74:          HFSTABILITY =          0 [         0] 
+
+           75:             ROT_EVEC =          0 [         0] 
+           76:           BRUCK_CONV =          4 [         4] (tol)
+           78:                UNITS =          0 [         0] 
+           79:          FD_USEGROUP =          0 [         0] 
+
+           80:           FD_PROJECT =          0 [         0] 
+           83:                VTRAN =          0 [         0] 
+           84:             HF2_FILE =          1 [         1] 
+           85:             SUBGROUP =          0 [         0] 
+
+           86:           SUBGRPAXIS =          0 [         0] 
+           87:               EXCITE =          0 [         0] 
+           88:            ZETA_CONV =         12 [        12] (tol)
+           90:           TREAT_PERT =          0 [         0] 
+
+           91:          ESTATE_PROP =          0 [         0] 
+           92:           OPT_MAXCYC =         50 [        50] 
+           93:             ABCDTYPE =          0 [         0] 
+           95:           AO_LADDERS =          1 [         1] 
+
+           96:                 FOCK =          1 [         1] 
+           97:          ESTATE_MAXC =         20 [        20] 
+           98:           ESTATE_TOL =          5 [        -1] (tol)
+           99:            TURBOMOLE =          0 [         0] 
+
+          100:           GAMMA_ABCD =          0 [         0] 
+          101:            ZETA_TYPE =          1 [         1] 
+          102:          ZETA_MAXCYC =         50 [        50] 
+          103:             RESRAMAN =          0 [         0] 
+
+          104:                  PSI =          0 [         0] 
+          105:             GEOM_OPT =          0 [         0] 
+          106:             EXTERNAL =          2 [         2] 
+          107:          HESS_UPDATE =          0 [         0] 
+
+          108:         INIT_HESSIAN =          0 [         0] 
+          109:          EXTRAPOLATE =          0 [         0] 
+          201:              EA_CALC =          0 [         0] 
+          203:                 TDHF =          0 [         0] 
+
+          204:           FUNCTIONAL =          4 [         4] 
+          205:           EOM_MAXCYC =         50 [        50] cycles
+          206:              EOMPROP =          0 [         0] 
+          207:             ABCDFULL =          1 [         0] 
+
+          208:           INTGRL_TOL =         14 [        14] (tol)
+          209:             DAMP_TYP =          0 [         0] 
+          210:             DAMP_TOL =         10 [        10] x 0.01
+          211:              LSHF_A1 =          0 [         0] x 0.01
+
+          212:              LSHF_B1 =          0 [         0] x 0.01
+          213:             POLYRATE =          0 [         0] 
+          214:              IP_CALC =          0 [         0] 
+          216:            IP_SEARCH =          0 [         0] 
+
+          217:               EOMREF =          0 [         0] 
+          218:              SOLVENT =          0 [         0] 
+          219:            EE_SEARCH =          0 [         0] 
+          220:            EOM_PRJCT =          0 [         0] 
+
+          221:               NEWVRT =          0 [         0] 
+          222:             HBARABCD =          1 [         0] 
+          223:             HBARABCI =          1 [         0] 
+          224:             NT3EOMEE =          0 [         0] 
+
+          225:              NOREORI =          2 [         2] 
+          227:               KS_POT =          0 [         0] 
+          228:             DIP_CALC =          0 [         0] 
+          230:             DEA_CALC =          0 [         0] 
+
+          232:              PROGRAM =          2 [         0] 
+          233:                CCR12 =          0 [         0] 
+          234:            EOMXFIELD =          0 [         0] x 10-6
+          235:            EOMYFIELD =          0 [         0] x 10-6
+
+          236:            EOMZFIELD =          0 [         0] x 10-6
+          237:              INSERTF =          0 [         0] 
+          238:            GRAD_CALC =          0 [         0] 
+          239:            IMEM_SIZE =    3000000 [   3000000] Words
+
+          240:              MAKERHF =          0 [         0] 
+          241:           GLOBAL_MEM =          0 [         0] Words
+          242:             PRP_INTS =          0 [         0] 
+          243:           TRUNC_ORBS =          0 [         0] 
+
+          244:             FNO_KEEP =          0 [         0] percent
+          245:             FNO_BSSE =          0 [         0] 
+          246:              NATURAL =          0 [         0] 
+          248:              UNO_REF =          0 [         0] 
+
+          249:           UNO_CHARGE =          0 [         0] 
+          250:             UNO_MULT =          1 [         1] 
+          251:                RAMAN =          0 [         0] 
+          252:            KUCHARSKI =          0 [         0] 
+
+          253:             SCF_TYPE =          0 [         0] 
+          254:               DIRECT =          0 [         0] 
+          255:         SINGLE_STORE =          0 [         0] 
+          256:          PREP_VIBRON =          0 [         0] 
+
+          257:          GRID_VIBRON =          0 [         0] 
+          258:          SCAN_NORMAL =          0 [         0] 
+          259:         NORMAL_CURVY =          0 [         0] 
+          260:           GEO_SAMPLE =          0 [         0] 
+
+          261:             PART_EOM =          0 [         0] 
+          262:          ORDER_ALPHA =          0 [         0] 
+          263:               FFIELD =          0 [         0] x 10-6
+          264:             AUTO_OCC =          0 [         2] 
+
+          265:          GEN_QUARTIC =          0 [         0] 
+          266:             OOMP_CYC =         50 [        50] 
+          267:            DKH_ORDER =          0 [         0] 
+          268:           UNCONTRACT =          0 [         0] 
+
+          269:          OPT_CONTROL =          0 [         0] 
+          270:              DAMP_CC =        100 [       100] x 0.01
+          271:             PES_SCAN =          0 [         0] 
+          273:         PRJCT_SINGLE =          1 [         1] 
+
+          274:                 COPT =          0 [         0] 
+          275:            RPA_SOLVE =          0 [         0] 
+          276:          TIME_DPD_CC =          0 [         0] 
+          277:         EE_ROOT_FIND =          0 [         0] 
+
+          278:            OO_METHOD =          0 [         0] 
+          279:             PCCD_REF =          0 [         0] 
+          280:            EOM_SOLVE =          0 [         0] 
+          281:         OO_CONSTRAIN =          0 [         0] 
+
+          282:            OO_MAXCYC =         50 [        50] 
+          ------------------------------------------------------------
+
+                         ACES STATE VARIABLES (STRINGS)
+          ------------------------------------------------------------
+          BASIS = 6-31G*
+          OCCUPATION = [ESTIMATED BY SCF]
+          ------------------------------------------------------------
+ Can_do_frq F                     0
+ -----After call to Entry-----
+ The FNDDONE in Geopt:                     1
+ The gradient calcs:                     0
+ Hessian calc.,Geo. opt. and iarch: F F                     0
+ Entering Fetchz IARCH .NE. 1                     0
+ @-Entry to fetchz logic                     0                     0
+Creating CUSTRUCT jobarc record
+     0.000000     0.000000     0.000000
+     0.000000     0.000000     1.732879
+ 
+ @GEOPT, IPASS1,  PS1EXIST=:                     0 F
+ Before the call to GMETRY, XYZIN T
+ The number of atoms    2
+ 
+ The Cartesians before translations to CM
+   0.0000000   0.0000000   0.0000000
+   0.0000000   0.0000000   1.7328787
+ 
+ The atomic masses 
+    1.0078250   18.9984000
+ The Cartesians in center of mass coords
+   0.0000000   0.0000000  -1.6455840
+   0.0000000   0.0000000   0.0872948
+ 
+ 
+  @symmetry-i, Coordinates after COM shift 
+   0.0000000   0.0000000  -1.6455840
+   0.0000000   0.0000000   0.0872948
+ 
+  Determining Principal axis of Rot -1
+  Scale first column 
+  The eigenvector of the moment of inertia matrix
+  Determinant?    1.00000
+     0.000000000000    0.000000000000    1.000000000000
+     0.000000000000    1.000000000000    0.000000000000
+    -1.000000000000    0.000000000000    0.000000000000
+ 
+  Rotational constants (in cm-1): 
+    20.94637       20.94637
+ 
+ The symmetry processing begins
+ The Cartesians in principal axis before entering symmetry auto
+   0.00000   0.00000  -1.64558
+  -0.00000   0.00000   0.08729
+ The Cartesians in bare input axis before entering symmetry auto
+   0.00000   0.00000   0.00000
+   0.00000   0.00000   1.73288
+ 
+  Coordinates at entry to symmetry_auto:
+     0.000000000000    0.000000000000   -1.645583976639
+    -0.000000000000    0.000000000000    0.087294754888
+ 
+********************************************************************************
+   The full molecular point group is CXv .
+   The largest Abelian subgroup of the full molecular point group is C2v .
+   The computational point group is C2v .
+********************************************************************************
+ @-SYM_AUTO The Orientation matrices: ORIEN2 and ORIENT
+ 
+
+                 COLUMN   1       COLUMN   2       COLUMN   3
+ ROW   1      1.00000000000    0.00000000000    0.00000000000
+ ROW   2      0.00000000000    1.00000000000    0.00000000000
+ ROW   3     -0.00000000000    0.00000000000    1.00000000000
+ 
+
+                 COLUMN   1       COLUMN   2       COLUMN   3
+ ROW   1      1.00000000000    0.00000000000    0.00000000000
+ ROW   2      0.00000000000    1.00000000000    0.00000000000
+ ROW   3      0.00000000000    0.00000000000    1.00000000000
+ 
+@-SYM_AUTO Current coordinates (in /COORD/) common block
+   0.0000000   0.0000000  -1.6455840
+  -0.0000000   0.0000000   0.0872948
+ 
+ Coordinates at exit from symmetry_auto)
+   0.0000000   0.0000000  -1.6455840
+  -0.0000000   0.0000000   0.0872948
+ 
+ 
+ @-SYM_AUTO ORIENT2=ORIEN2xORIENT
+
+                 COLUMN   1       COLUMN   2       COLUMN   3
+ ROW   1      1.00000000000    0.00000000000    0.00000000000
+ ROW   2      0.00000000000    1.00000000000    0.00000000000
+ ROW   3     -0.00000000000    0.00000000000    1.00000000000
+ Q(Input-ordered)<->Q(Principle axis orientation) 
+
+                 COLUMN   1       COLUMN   2       COLUMN   3
+ ROW   1      1.00000000000    0.00000000000    0.00000000000
+ ROW   2      0.00000000000    1.00000000000    0.00000000000
+ ROW   3     -0.00000000000    0.00000000000    1.00000000000
+                     2
+ The new (sym. rotated) geometry
+     0.000000     0.000000    -1.645584
+    -0.000000     0.000000     0.087295
+ The old (principal axis) geometry
+     0.000000     0.000000     0.000000
+     0.000000     0.000000     1.732879
+         --------------------------------------------------
+          The internal to input order reorientation matrix
+         --------------------------------------------------
+             1.0000000000   0.0000000000   0.0000000000
+             0.0000000000   1.0000000000   0.0000000000
+             0.0000000000   0.0000000000   1.0000000000
+         --------------------------------------------------
+         -----------------------------------------------
+         Cartesian coordinates corresponding to internal 
+                 coordinate input (Angstroms) 
+ ----------------------------------------------------------------
+ Z-matrix   Atomic            C o o r d i n a t e s
+  Symbol    Number           X              Y              Z
+ ----------------------------------------------------------------
+     H         1         0.00000000     0.00000000    -0.87080560
+     F         9        -0.00000000     0.00000000     0.04619440
+ ----------------------------------------------------------------
+   Interatomic distance matrix (Angstroms) 
+ 
+                 H             F    
+                [ 1]        [ 2]
+  H    [ 1]     0.00000
+  F    [ 2]     0.91700     0.00000
+ 
+The basis set definitions
+   1 H:6-31G*            
+   9 F:6-31G*            
+The nord array:    1   2
+ The MPVMZMAT record (symmetry unique only, others are zero)
+   1   2
+ 
+The basis set definitions
+   1 H:6-31G*            
+   9 F:6-31G*            
+ @GEOPT-W, Archive file not created for single-point calculation.
+ 
+ @GEOPT, IPASS1,  PS1EXIST=:                     0 F
+ Finite diffs; ignore and geomopt vars: F F
+ The vib calc. related varrs:
+ iflags(h_IFLAGS_vib):                     0
+ The finite diffs: F
+ iflags2(h_IFLAGS2_geom_opt):                     0
+ first run of popt num. frq:                     0
+ One- and two-electron integrals over symmetry-adapted AOs are calculated.\n
+ @READIN: Spherical harmonics are used.
+  @READIN-I, Nuclear repulsion energy :    5.1936698375 a.u.
+  required memory for a1 array                4451690  words 
+  required memory for a2 array                  70214  words 
+  @TWOEL-I,        628 integrals of symmetry type  I I I I
+  @TWOEL-I,        602 integrals of symmetry type  I J I J
+  @TWOEL-I,        445 integrals of symmetry type  I I J J
+  @TWOEL-I,        148 integrals of symmetry type  I J K L
+  @TWOEL-I, Total number of 2-e integrals       1823.
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0: 0.00 (      0.0)   0: 0: 0.01 (      0.0)   0: 0: 0.1 (      0.1)
+ ZMAT<->VMOL
+   1   2
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0: 0.00 (      0.0)   0: 0: 0.00 (      0.0)   0: 0: 0.0 (      0.0)
+@VSCF: There are   16 functions in the AO basis.
+
+       There are    4 irreducible representations.
+
+
+       Irrep        # of functions
+         1                  9
+         2                  3
+         3                  3
+         4                  1
+ 
+  @VSCF-I, Parameters for SCF calculation: 
+             SCF reference function:  RHF
+       Maximum number of iterations:  150
+          Full symmetry point group: CXv 
+          Computational point group: C2v 
+             Initial density matrix: CORE                   
+          SCF convergence tolerance: 10**(- 7)
+           Convergence acceleration: RPP
+               Latest start for RPP:   8
+                          RPP order:   6
+
+  @SYMSIZ-I, Memory information:   13377859 words required.
+  @SYMSIZ-I, Fock matrices are constructed from AO integral file.
+  Occupancies from core Hamiltonian:
+
+          Alpha population by irrep:   3    1    1    0
+           Beta population by irrep:   3    1    1    0
+
+
+ The Alpha and Beta double pre. occupation numbers
+ 
+   1.00000   1.00000   1.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   1.00000   0.00000   0.00000
+   1.00000   0.00000   0.00000   0.00000
+ 
+   1.00000   1.00000   1.00000   0.00000   0.00000   0.00000
+   0.00000   0.00000   0.00000   1.00000   0.00000   0.00000
+   1.00000   0.00000   0.00000   0.00000
+ 
+  The No. of Alpha and Beta occupied orbitals (can be greater than
+  no. electons if fractional occupations are used)
+ 
+     No. of alpha occupied orbitals:    3    1    1    0
+     No. of beta occupied orbitasl :    3    1    1    0
+ 
+  --------------------------------------------------------------------
+  Iteration         Total Energy            Largest Error in FDS-SDF
+  --------------------------------------------------------------------
+       1           -93.6915467995              0.1674621516D+01
+       2           -96.2993533867              0.2147846797D+01
+       3           -98.5970835556              0.1244606623D+01
+       4           -99.5284205197              0.8130441770D+00
+       5           -99.8586617193              0.4346918777D+00
+       6           -99.9564628368              0.2479043052D+00
+       7           -99.9874418819              0.1320116643D+00
+       8           -99.9966919815              0.7406941658D-01
+       9          -100.0007470708              0.1244913700D-03
+      10          -100.0007470832              0.3854284781D-04
+      11          -100.0007470838              0.4046682086D-05
+      12          -100.0007470838              0.2663120390D-06
+      13          -100.0007470838              0.2080285766D-07
+
+@VSCF: SCF has converged.
+
+     E(SCF)=      -100.0007470838
+
+
+
+      Trace of projected alpha density matrix =   1.000000000
+
+      Alpha part of wavefunction is symmetric.
+
+
+  @EVLOUT-I, There are MOs which are solely made up of f and/or higher
+             angular momentum AOs.  Analysis for these cases is not yet
+             implemented.  These orbitals will have "----" as the symmetry.
+
+  ORBITAL EIGENVALUES (ALPHA)  (1H = 27.2113957 eV)
+
+       MO #        E(hartree)               E(eV)           FULLSYM    COMPSYM
+       ----   --------------------   --------------------   -------   ---------
+    1     1         -26.2729574412        -714.9238411404     SG+        A1 (1)
+    2     2          -1.5797492864         -42.9871829393     SG+        A1 (1)
+    3     3          -0.7454494033         -20.2847186865     SG+        A1 (1)
+    4    10          -0.6284986632         -17.1023258213      PI        B1 (2)
+    5    13          -0.6284986603         -17.1023257427      PI        B2 (3)
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    6     4           0.2203015063           5.9947114622     SG+        A1 (1)
+    7     5           1.1002836178          29.9402529071     SG+        A1 (1)
+    8    11           1.4907849294          40.5663386166      PI        B1 (2)
+    9    14           1.4907849319          40.5663386846      PI        B2 (3)
+   10     6           1.5681290149          42.6709791330     SG+        A1 (1)
+   11     7           1.9650507319          53.4717730364     SG+        A1 (1)
+   12    15           2.0867367987          56.7830207506      PI        B2 (3)
+   13    12           2.0867367988          56.7830207553      PI        B1 (2)
+   14    16           2.1551339802          58.6442035219    ----      ---- (4)
+   15     8           2.1551339802          58.6442035219    ----      ---- (1)
+   16     9           2.9874835421          81.2935968111     SG+        A1 (1)
+
+
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0: 0.01 (      0.0)   0: 0: 0.00 (      0.0)   0: 0: 0.1 (      0.1)
+  Full RHF integral transformation
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0: 0.00 (      0.0)   0: 0: 0.00 (      0.0)   0: 0: 0.0 (      0.0)
+ 
+ 
+ performing integral processing for standard CC
+  @GMOIAA-I, Processing MO integrals for spin case AA.
+  @GMOIAA-I, Generation of integral list completed.
+                      TYPE            NUMBER
+                      ----           --------
+                      PPPP                650
+                      PPPH                989
+                      PPHH                450
+                      PHPH                312
+                      PHHH                259
+                      HHHH                 49
+
+                     TOTAL               2709
+  Alpha diagonal element of the reference state
+  ---------------------------------------------
+ -26.27296  -1.57975  -0.74545  -0.62850  -0.62850   0.22030   1.10028
+   1.56813   1.96505   2.15513   2.98748   1.49078   2.08674   1.49078
+   2.08674   2.15513
+  Beta  diagonal element of the reference state
+  ---------------------------------------------
+ -26.27296  -1.57975  -0.74545  -0.62850  -0.62850   0.22030   1.10028
+   1.56813   1.96505   2.15513   2.98748   1.49078   2.08674   1.49078
+   2.08674   2.15513
+
+  @FORMT2-I, Second-order MBPT correlation energies:
+              ----------------------------------------------
+              E(SCF)                = -100.000747083779 a.u.
+@CHECKSUM: @-INTPRC:T2        -0.741581269026E-02      0.357144461645E-03
+@CHECKSUM: @-INTPRC:T2        -0.282554359474E-01      0.180537847648E-02
+@CHECKSUM: @-INTPRC:T2        -0.363359254809E-01      0.180537848090E-02
+@CHECKSUM: @-INTPRC:T2        -0.579393094676E-01      0.130530443041E-02
+              E2(AA)                =   -0.024407368196 a.u.
+ The T2-ABAB
+@CHECKSUM: @-INTPRC:T2-ABAB        -0.466302068857E+00      0.150615325065E-01
+ The T2-ABAB
+@CHECKSUM: @-INTPRC:T2-ABAB        -0.169600992267E+00      0.521273352605E-02
+ The T2-ABAB
+@CHECKSUM: @-INTPRC:T2-ABAB        -0.146059607411E+00      0.521273353795E-02
+ The T2-ABAB
+@CHECKSUM: @-INTPRC:T2-ABAB        -0.958212504911E-01      0.336263271020E-02
+              E2(AB)                =   -0.130956614248 a.u.
+              E2(TOT)               =   -0.179771350640 a.u.
+              Total MBPT(2) energy  = -100.180518434418 a.u.
+              ----------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04320 [  4   4  12  12]-0.04320 [  3   3   7   7]-0.03670
+[  5   4  14  12]-0.03389 [  4   5  12  14]-0.03389 [  3   3   8   8]-0.03000
+[  3   3   6   6]-0.02948 [  5   3  14   8]-0.02715 [  3   5   8  14]-0.02715
+[  4   3  12   8]-0.02715 [  3   4   8  12]-0.02715 [  3   3   7   6]-0.02208
+[  3   3   6   7]-0.02208 [  5   2  14   9]-0.02006 [  2   5   9  14]-0.02006
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1698517950.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3279620
+ 
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0: 0.02 (      0.0)   0: 0: 0.00 (      0.0)   0: 0: 0.2 (      0.2)
+
+-----------------------------------------------------------------------------
+                                Entering xvcc
+-----------------------------------------------------------------------------
+
+ 
+ 
+   Running standard CC program
+ 
+   The CC damp parameter = 1.0000
+ 
+   CCSDT     energy will be calculated.
+   Regular CC calculation is performed
+ 
+  @VCC-I, Triples lists will be created. 
+ @AUXIOI-I, Total number of words on AUXMOI           16308
+   The AA contribution to the correlation energy is:   -0.0244074 a.u.
+   The AB contribution to the correlation energy is:   -0.1309566 a.u.
+   The total correlation energy is -0.179771350640 a.u.
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109131451302E+02      0.829615894351E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789303577898E+01      0.514061136978E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818539490813E+01      0.514061137414E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457396333323E+01      0.289420888133E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159242223519E+02      0.116387113150E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994019869421E+01      0.661509767527E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972011606786E+01      0.661509768167E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505034220182E+01      0.324229017176E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000726234048
+ @TRPS2-I, E4TAAA      -0.000031009004
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  1       6    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+[  1       5    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+[  1       5    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+[  1       5    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+[  1       5    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0000000000.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04320 [  4   4  12  12]-0.04320 [  3   3   7   7]-0.03670
+[  5   4  14  12]-0.03389 [  4   5  12  14]-0.03389 [  3   3   8   8]-0.03000
+[  3   3   6   6]-0.02948 [  5   3  14   8]-0.02715 [  3   5   8  14]-0.02715
+[  4   3  12   8]-0.02715 [  3   4   8  12]-0.02715 [  3   3   7   6]-0.02208
+[  3   3   6   7]-0.02208 [  5   2  14   9]-0.02006 [  2   5   9  14]-0.02006
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1698517950.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3279620
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.129946483586E+00      0.527320584944E-02
+@CHECKSUM: T2-ABAB :        -0.877783919027E+00      0.288496322807E-01
+@CHECKSUM: T1-AA   :         0.000000000000E+00      0.000000000000E+00
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  1       6    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+[  1       5    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+[  1       5    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+[  1       5    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+[  1       5    ] 0.00000 [  1       5    ] 0.00000 [  1       5    ] 0.00000
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0000000000.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04320 [  4   4  12  12]-0.04320 [  3   3   7   7]-0.03670
+[  5   4  14  12]-0.03389 [  4   5  12  14]-0.03389 [  3   3   8   8]-0.03000
+[  3   3   6   6]-0.02948 [  5   3  14   8]-0.02715 [  3   5   8  14]-0.02715
+[  4   3  12   8]-0.02715 [  3   4   8  12]-0.02715 [  3   3   7   6]-0.02208
+[  3   3   6   7]-0.02208 [  5   2  14   9]-0.02006 [  2   5   9  14]-0.02006
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1698517950.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3279620
+ 
+   The AA contribution to the correlation energy is:   -0.0225963 a.u.
+   The AB contribution to the correlation energy is:   -0.1372007 a.u.
+   The total correlation energy is -0.182393391504 a.u.
+  Convergence information after     1 iterations: 
+  Largest element of residual vector :  0.59715591E-02.
+  Largest element of DIIS residual   :  0.59715591E-02.
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109027614399E+02      0.829591535986E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789090348270E+01      0.514233141300E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818407257320E+01      0.514233141727E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457094877123E+01      0.289156050258E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159291437420E+02      0.116433043042E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994119690318E+01      0.661566373334E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972142133056E+01      0.661566373974E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505052518974E+01      0.324225014300E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000865448373
+ @TRPS2-I, E4TAAA      -0.000026059040
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  4      12    ] 0.00597 [  5      14    ] 0.00597 [  3       6    ]-0.00585
+[  3      11    ]-0.00290 [  2       8    ] 0.00278 [  3       9    ] 0.00218
+[  2       6    ] 0.00132 [  3       7    ]-0.00085 [  2       7    ]-0.00057
+[  2      11    ] 0.00047 [  3       8    ]-0.00038 [  4      13    ]-0.00037
+[  5      15    ]-0.00037 [  2       9    ]-0.00027 [  1       9    ]-0.00019
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0114001980.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04456 [  4   4  12  12]-0.04456 [  3   3   7   7]-0.04151
+[  3   3   6   6]-0.03388 [  5   4  14  12]-0.03263 [  4   5  12  14]-0.03263
+[  3   3   8   8]-0.03098 [  5   3  14   8]-0.02642 [  3   5   8  14]-0.02642
+[  4   3  12   8]-0.02642 [  3   4   8  12]-0.02642 [  3   3   7   6]-0.02621
+[  3   3   6   7]-0.02621 [  5   2  14   9]-0.02050 [  2   5   9  14]-0.02050
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1789819903.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3642560
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.122279159119E+00      0.448823565740E-02
+@CHECKSUM: T2-ABAB :        -0.959562085883E+00      0.320345528560E-01
+@CHECKSUM: T1-AA   :         0.677938742118E-02      0.129964513375E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  4      12    ] 0.00597 [  5      14    ] 0.00597 [  3       6    ]-0.00585
+[  3      11    ]-0.00290 [  2       8    ] 0.00278 [  3       9    ] 0.00218
+[  2       6    ] 0.00132 [  3       7    ]-0.00085 [  2       7    ]-0.00057
+[  2      11    ] 0.00047 [  3       8    ]-0.00038 [  4      13    ]-0.00037
+[  5      15    ]-0.00037 [  2       9    ]-0.00027 [  1       9    ]-0.00019
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0114001980.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04456 [  4   4  12  12]-0.04456 [  3   3   7   7]-0.04151
+[  3   3   6   6]-0.03388 [  5   4  14  12]-0.03263 [  4   5  12  14]-0.03263
+[  3   3   8   8]-0.03098 [  5   3  14   8]-0.02642 [  3   5   8  14]-0.02642
+[  4   3  12   8]-0.02642 [  3   4   8  12]-0.02642 [  3   3   7   6]-0.02621
+[  3   3   6   7]-0.02621 [  5   2  14   9]-0.02050 [  2   5   9  14]-0.02050
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1789819903.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3642560
+ 
+   The AA contribution to the correlation energy is:   -0.0222389 a.u.
+   The AB contribution to the correlation energy is:   -0.1403802 a.u.
+   The total correlation energy is -0.184857941999 a.u.
+  Convergence information after     2 iterations: 
+  Largest element of residual vector : -0.28580010E-02.
+  Largest element of DIIS residual   : -0.24983016E-02.
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109047809971E+02      0.829463062675E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789139752066E+01      0.514216153202E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818445596714E+01      0.514216153626E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457082933199E+01      0.289128586689E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159313051113E+02      0.116457967429E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994173909563E+01      0.661604505381E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972199736052E+01      0.661604506021E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505058704873E+01      0.324237746184E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000929966170
+ @TRPS2-I, E4TAAA      -0.000024459769
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00668 [  4      12    ] 0.00619 [  5      14    ] 0.00619
+[  3      11    ]-0.00365 [  2       8    ] 0.00333 [  3       9    ] 0.00253
+[  2       6    ] 0.00170 [  3       8    ]-0.00140 [  3       7    ]-0.00127
+[  2       9    ]-0.00088 [  2      11    ] 0.00079 [  2       7    ]-0.00079
+[  4      13    ]-0.00034 [  5      15    ]-0.00034 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0126840388.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04619 [  4   4  12  12]-0.04619 [  3   3   7   7]-0.04366
+[  3   3   6   6]-0.03740 [  5   4  14  12]-0.03314 [  4   5  12  14]-0.03314
+[  3   3   8   8]-0.03169 [  3   3   7   6]-0.02866 [  3   3   6   7]-0.02866
+[  5   3  14   8]-0.02677 [  3   5   8  14]-0.02677 [  4   3  12   8]-0.02677
+[  3   4   8  12]-0.02677 [  5   2  14   9]-0.02096 [  2   5   9  14]-0.02096
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1853477699.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3866736
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.120270532864E+00      0.431907379186E-02
+@CHECKSUM: T2-ABAB :        -0.994221454112E+00      0.343537958045E-01
+@CHECKSUM: T1-AA   :         0.515185980418E-02      0.160884839293E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00668 [  4      12    ] 0.00619 [  5      14    ] 0.00619
+[  3      11    ]-0.00365 [  2       8    ] 0.00333 [  3       9    ] 0.00253
+[  2       6    ] 0.00170 [  3       8    ]-0.00140 [  3       7    ]-0.00127
+[  2       9    ]-0.00088 [  2      11    ] 0.00079 [  2       7    ]-0.00079
+[  4      13    ]-0.00034 [  5      15    ]-0.00034 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0126840388.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04619 [  4   4  12  12]-0.04619 [  3   3   7   7]-0.04366
+[  3   3   6   6]-0.03740 [  5   4  14  12]-0.03314 [  4   5  12  14]-0.03314
+[  3   3   8   8]-0.03169 [  3   3   7   6]-0.02866 [  3   3   6   7]-0.02866
+[  5   3  14   8]-0.02677 [  3   5   8  14]-0.02677 [  4   3  12   8]-0.02677
+[  3   4   8  12]-0.02677 [  5   2  14   9]-0.02096 [  2   5   9  14]-0.02096
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1853477699.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3866736
+ 
+   The AA contribution to the correlation energy is:   -0.0220072 a.u.
+   The AB contribution to the correlation energy is:   -0.1415136 a.u.
+   The total correlation energy is -0.185528143274 a.u.
+  Convergence information after     3 iterations: 
+  Largest element of residual vector : -0.81518080E-03.
+  Largest element of DIIS residual   : -0.68876146E-03.
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109046811177E+02      0.829463765435E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789142862480E+01      0.514203830651E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818447394441E+01      0.514203831074E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457071360107E+01      0.289107314276E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159317218466E+02      0.116463791402E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994181496844E+01      0.661607298199E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972207150429E+01      0.661607298839E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505057727287E+01      0.324238691086E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000942882038
+ @TRPS2-I, E4TAAA      -0.000023553392
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00771 [  4      12    ] 0.00635 [  5      14    ] 0.00635
+[  3      11    ]-0.00384 [  2       8    ] 0.00349 [  3       9    ] 0.00267
+[  2       6    ] 0.00179 [  3       7    ]-0.00164 [  3       8    ]-0.00157
+[  2       9    ]-0.00093 [  2      11    ] 0.00085 [  2       7    ]-0.00077
+[  4      13    ]-0.00032 [  5      15    ]-0.00032 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0135943444.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04656 [  4   4  12  12]-0.04656 [  3   3   7   7]-0.04410
+[  3   3   6   6]-0.03836 [  5   4  14  12]-0.03323 [  4   5  12  14]-0.03323
+[  3   3   8   8]-0.03181 [  3   3   7   6]-0.02939 [  3   3   6   7]-0.02939
+[  5   3  14   8]-0.02682 [  3   5   8  14]-0.02682 [  4   3  12   8]-0.02682
+[  3   4   8  12]-0.02682 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1867112998.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3916383
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119502571592E+00      0.423897388187E-02
+@CHECKSUM: T2-ABAB :        -0.998606953226E+00      0.348611094786E-01
+@CHECKSUM: T1-AA   :         0.415872286394E-02      0.184806199341E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00771 [  4      12    ] 0.00635 [  5      14    ] 0.00635
+[  3      11    ]-0.00384 [  2       8    ] 0.00349 [  3       9    ] 0.00267
+[  2       6    ] 0.00179 [  3       7    ]-0.00164 [  3       8    ]-0.00157
+[  2       9    ]-0.00093 [  2      11    ] 0.00085 [  2       7    ]-0.00077
+[  4      13    ]-0.00032 [  5      15    ]-0.00032 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0135943444.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04656 [  4   4  12  12]-0.04656 [  3   3   7   7]-0.04410
+[  3   3   6   6]-0.03836 [  5   4  14  12]-0.03323 [  4   5  12  14]-0.03323
+[  3   3   8   8]-0.03181 [  3   3   7   6]-0.02939 [  3   3   6   7]-0.02939
+[  5   3  14   8]-0.02682 [  3   5   8  14]-0.02682 [  4   3  12   8]-0.02682
+[  3   4   8  12]-0.02682 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1867112998.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3916383
+ 
+   The AA contribution to the correlation energy is:   -0.0219414 a.u.
+   The AB contribution to the correlation energy is:   -0.1418441 a.u.
+   The total correlation energy is -0.185726835769 a.u.
+  Convergence information after     4 iterations: 
+  Largest element of residual vector : -0.18535129E-03.
+  Largest element of DIIS residual   : -0.10350514E-03.
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109046958557E+02      0.829468012133E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789148903496E+01      0.514197315139E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818449828830E+01      0.514197315562E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457074212690E+01      0.289106474211E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159316879864E+02      0.116464354514E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994180657984E+01      0.661606599290E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972206153742E+01      0.661606599930E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505057320635E+01      0.324238790106E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000946346386
+ @TRPS2-I, E4TAAA      -0.000023345276
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00792 [  4      12    ] 0.00628 [  5      14    ] 0.00628
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00180 [  3       7    ]-0.00172 [  3       8    ]-0.00161
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00078
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0136596728.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03863 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03179 [  3   3   7   6]-0.02953 [  3   3   6   7]-0.02953
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868667040.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921186
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119557385666E+00      0.423026739571E-02
+@CHECKSUM: T2-ABAB :        -0.997827878676E+00      0.349191650627E-01
+@CHECKSUM: T1-AA   :         0.372582341111E-02      0.186586660520E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00792 [  4      12    ] 0.00628 [  5      14    ] 0.00628
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00180 [  3       7    ]-0.00172 [  3       8    ]-0.00161
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00078
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0136596728.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03863 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03179 [  3   3   7   6]-0.02953 [  3   3   6   7]-0.02953
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868667040.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921186
+ 
+   The AA contribution to the correlation energy is:   -0.0219325 a.u.
+   The AB contribution to the correlation energy is:   -0.1418737 a.u.
+   The total correlation energy is -0.185738748484 a.u.
+  Convergence information after     5 iterations: 
+  Largest element of residual vector : -0.63713844E-04.
+  Largest element of DIIS residual   : -0.34799397E-04.
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109046809019E+02      0.829470756300E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789148812490E+01      0.514196491198E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818449110810E+01      0.514196491621E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457074612389E+01      0.289106222397E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159316634669E+02      0.116464350645E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994180379385E+01      0.661606494052E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972205915424E+01      0.661606494692E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505057348632E+01      0.324238793665E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000947155341
+ @TRPS2-I, E4TAAA      -0.000023301306
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00801 [  4      12    ] 0.00627 [  5      14    ] 0.00627
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00161
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00078
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0136989926.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03868 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868769984.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921555
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119624236618E+00      0.423069859264E-02
+@CHECKSUM: T2-ABAB :        -0.997540184990E+00      0.349230125452E-01
+@CHECKSUM: T1-AA   :         0.357984035953E-02      0.187662399221E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00801 [  4      12    ] 0.00627 [  5      14    ] 0.00627
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00161
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00078
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0136989926.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03868 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868769984.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921555
+ 
+   The AA contribution to the correlation energy is:   -0.0219325 a.u.
+   The AB contribution to the correlation energy is:   -0.1418742 a.u.
+   The total correlation energy is -0.185739145049 a.u.
+  Convergence information after     6 iterations: 
+  Largest element of residual vector : -0.13317647E-04.
+  Largest element of DIIS residual   : -0.31444578E-05.
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109046675857E+02      0.829471368394E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789148540163E+01      0.514196469588E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818448825878E+01      0.514196470011E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457074659424E+01      0.289106176360E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159316573847E+02      0.116464325851E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994180360772E+01      0.661606474524E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972205883779E+01      0.661606475164E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505057339448E+01      0.324238770558E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000947366040
+ @TRPS2-I, E4TAAA      -0.000023293404
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00803 [  4      12    ] 0.00626 [  5      14    ] 0.00626
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00160
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00079
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0137098722.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03869 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868740397.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921468
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119634811871E+00      0.423106050845E-02
+@CHECKSUM: T2-ABAB :        -0.997510488995E+00      0.349219067083E-01
+@CHECKSUM: T1-AA   :         0.354497536522E-02      0.187960594774E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00803 [  4      12    ] 0.00626 [  5      14    ] 0.00626
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00160
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00079
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0137098722.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03869 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868740397.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921468
+ 
+   The AA contribution to the correlation energy is:   -0.0219329 a.u.
+   The AB contribution to the correlation energy is:   -0.1418732 a.u.
+   The total correlation energy is -0.185738901510 a.u.
+  Convergence information after     7 iterations: 
+  Largest element of residual vector : -0.27510176E-05.
+  Largest element of DIIS residual   : -0.62300083E-06.
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109046656173E+02      0.829471439634E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789148501522E+01      0.514196474985E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818448790837E+01      0.514196475408E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457074670073E+01      0.289106163199E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159316574920E+02      0.116464324153E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994180382387E+01      0.661606474948E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972205895174E+01      0.661606475588E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505057332092E+01      0.324238767515E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000947412074
+ @TRPS2-I, E4TAAA      -0.000023291535
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00804 [  4      12    ] 0.00626 [  5      14    ] 0.00626
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00160
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00079
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0137121775.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03870 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868739651.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921467
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119633023821E+00      0.423110515810E-02
+@CHECKSUM: T2-ABAB :        -0.997523986675E+00      0.349218788302E-01
+@CHECKSUM: T1-AA   :         0.353660335412E-02      0.188023811703E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00804 [  4      12    ] 0.00626 [  5      14    ] 0.00626
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00160
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00079
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0137121775.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03870 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868739651.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921467
+ 
+   The AA contribution to the correlation energy is:   -0.0219329 a.u.
+   The AB contribution to the correlation energy is:   -0.1418731 a.u.
+   The total correlation energy is -0.185738911819 a.u.
+  Convergence information after     8 iterations: 
+  Largest element of residual vector : -0.20100219E-06.
+  Largest element of DIIS residual   : -0.79594415E-07.
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+Entering RHF only block
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.109046653639E+02      0.829471451885E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.789148504111E+01      0.514196478065E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.818448790914E+01      0.514196478488E+01
+ 
+Writing RHF only ABAB to disk:   56
+@CHECKSUM: ABAB        -0.457074670502E+01      0.289106158467E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.159316576403E+02      0.116464324342E+02
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.994180384518E+01      0.661606474276E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.972205896348E+01      0.661606474916E+01
+ 
+The ABBA and BAAB, the target list:  58
+@CHECKSUM: ABBA         0.505057331355E+01      0.324238767696E+01
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+ After mnij+abef
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+ After t1int2
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+
+------------------------------------------------------------------------
+                 VCC Triple Excitation Contributions 
+------------------------------------------------------------------------
+
+ The number of T3 amps and the number that can be kept in memory:      16384    5000000
+ 
+ @TRPS-I, There is sufficient core for the T3 file. 
+ @GETALLT3-I, Reading all of AUXMOI ! 
+ @TRPS-I, Reference function information : 
+          Reference function is Hartree-Fock 
+          Reference function is RHF Hartree-Fock 
+ @TRPS-I, INT1 is true 
+ @TRPS-I, INT2 is true 
+ @TRPS-I, Lengths of ijka integrals. #1        151
+                                     #2        151
+                                     #3        412
+                                     #4        412
+                                    Max        412
+ @INITRP-I, Initializing W intermediate lists. 
+ @T1BINT-I, Creating lists for CCSDT-1b Calculations 
+ @W45T3DRV-I, Calculating triples contributions to W(abci) and W(ijka). 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETOOOV-I, Some OOOV lists are being transposed. 
+ @SETOOOV-I, Two sets of OOOV lists are transposed. 
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+  DMPMBEJ-I, list                     58
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+ @TRPS2-I, Spin case AAB 
+ @TRPS2-I, E4TBAA      -0.000947422380
+ @TRPS2-I, E4TAAA      -0.000023291161
+ @TSPLST-I, List 110 is being transposed. 
+ @TSPLST-I, List 310 is being transposed. 
+  DMPMBEJ-I, list                     58
+ @SETVOVO-I, Some VOVO lists are being reordered. 
+ @PUTALLT3-I, Writing all of AUXMOI ! 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00804 [  4      12    ] 0.00626 [  5      14    ] 0.00626
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00160
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00079
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0137123998.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03870 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868740082.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921468
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+ 
+@CHECKSUM: T2-AAAA :        -0.119632580751E+00      0.423111006499E-02
+@CHECKSUM: T2-ABAB :        -0.997527210981E+00      0.349218949234E-01
+@CHECKSUM: T1-AA   :         0.353591548173E-02      0.188029906944E-03
+ 
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00804 [  4      12    ] 0.00626 [  5      14    ] 0.00626
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00160
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00079
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0137123998.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03870 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868740082.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921468
+ 
+   The AA contribution to the correlation energy is:   -0.0219329 a.u.
+   The AB contribution to the correlation energy is:   -0.1418731 a.u.
+   The total correlation energy is -0.185738921774 a.u.
+  Convergence information after     9 iterations: 
+  Largest element of residual vector : -0.24700644E-07.
+  Largest element of DIIS residual   : -0.18734032E-07.
+  Amplitude equations converged in     9 iterations.
+   The AA contribution to the correlation energy is:   -0.0219329 a.u.
+   The AB contribution to the correlation energy is:   -0.1418731 a.u.
+   The total correlation energy is -0.185738922951 a.u.
+   Largest T1 amplitudes for spin case AA:
+   i       a                 i       a                 i       a    
+-----------------------------------------------------------------------------
+[  3       6    ]-0.00804 [  4      12    ] 0.00626 [  5      14    ] 0.00626
+[  3      11    ]-0.00384 [  2       8    ] 0.00348 [  3       9    ] 0.00266
+[  2       6    ] 0.00177 [  3       7    ]-0.00173 [  3       8    ]-0.00160
+[  2       9    ]-0.00093 [  2      11    ] 0.00086 [  2       7    ]-0.00079
+[  4      13    ]-0.00030 [  5      15    ]-0.00030 [  1       9    ]-0.00013
+-----------------------------------------------------------------------------
+   Norm of T1AA vector (       22 symmetry allowed elements):  0.0137123998.
+-----------------------------------------------------------------------------
+   Largest T2 amplitudes for spin case AB:
+       _       _                 _       _                 _       _
+   i   j   a   b             i   j   a   b             i   j   a   b
+-----------------------------------------------------------------------------
+[  5   5  14  14]-0.04659 [  4   4  12  12]-0.04659 [  3   3   7   7]-0.04414
+[  3   3   6   6]-0.03870 [  5   4  14  12]-0.03324 [  4   5  12  14]-0.03324
+[  3   3   8   8]-0.03178 [  3   3   7   6]-0.02956 [  3   3   6   7]-0.02956
+[  5   3  14   8]-0.02681 [  3   5   8  14]-0.02681 [  4   3  12   8]-0.02681
+[  3   4   8  12]-0.02681 [  5   2  14   9]-0.02101 [  2   5   9  14]-0.02101
+-----------------------------------------------------------------------------
+   Norm of T2AB vector (      871 symmetry allowed elements):  0.1868740082.
+-----------------------------------------------------------------------------
+ 
+ Shannon Index =    0.3921468
+ 
+   The CC iterations have converged.
+
+       Summary of iterative solution of CC equations 
+      -----------------------------------------------------------
+                       Correlation           Total
+       Iteration         Energy              Energy
+      -----------------------------------------------------------
+            0        -0.179771350640    -100.180518434418  DIIS 
+            1        -0.182393391504    -100.183140475282  DIIS 
+            2        -0.184857941999    -100.185605025777  DIIS 
+            3        -0.185528143274    -100.186275227052  DIIS 
+            4        -0.185726835769    -100.186473919548  DIIS 
+            5        -0.185738748484    -100.186485832263  DIIS 
+            6        -0.185739145049    -100.186486228827  DIIS 
+            7        -0.185738901510    -100.186485985289  DIIS 
+            8        -0.185738911819    -100.186485995597  DIIS 
+            9        -0.185738922951    -100.186486006729  DIIS 
+      -----------------------------------------------------------
+
+               CCSDT       energy is    -100.186486006729 a.u. 
+
+      A miracle has come to pass. The CC iterations have converged.
+ @AUXIOO-I, Deleting the T3 file. 
+
+ Approximate Quadrpule excitation effects
+ Monika Musial
+ ---------------------------------------
+ 
+Fact. 5th order quads: rdsym  requires     726 words
+Fact. 5th order quads: rank1  requires   10406 words
+Fact. 5th order quads: t2hpt2 requires   27225 words
+Fact. 5th order quads: t2ppt2 requires   24200 words
+Fact. 5th order quads: t2hht3 requires   15750 words
+Fact. 5th order quads: t2wwt3 requires   17160 words
+engy1,x,ec1=   0.0002142165   0.0002142165
+ @AUXIOO-I, Deleting the T3 file. 
+engy1,x,ec1=   0.0001164477   0.0003306642
+engy1,x,ec1=  -0.0000876180   0.0002430461
+Fact. 5th order quads: t2hpt2 requires   27226 words
+engy1,x,ec1=  -0.0045005330  -0.0042574869
+Fact. 5th order quads: t2ppt2 requires   24201 words
+engy1,x,ec1=   0.0017446240  -0.0025128629
+Fact. 5th order quads: t2hht3 requires   15751 words
+Noniterative T4 energy contribution:   -0.000328377787
+Total correlation energy:              -0.186067300737
+Total   energy :                     -100.186814384516
+
+
+ACES ---SYSTEM--- (total sec) ----USER---- (total sec) -WALLCLOCK- (total sec)
+TIME   0: 0: 0.70 (      0.7)   0: 0: 0.22 (      0.2)   0: 0: 1.4 (      1.4)
+
+-----------------------------------------------------------------------------
+                                Exiting xvcc
+-----------------------------------------------------------------------------
+
+ The ACES Member Executable has completed successfully.

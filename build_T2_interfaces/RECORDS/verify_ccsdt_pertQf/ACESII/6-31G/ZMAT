@@ -1,0 +1,9 @@
+PBE calculation on h2o
+H 0.0 0.0 0.0
+F 0.0 0.0 0.917
+
+*ACES2(REF=RHF,CALC=CCSDT
+BASIS=6-31G,mem=2gb
+CC_EXPORDER=20
+
+
