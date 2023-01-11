@@ -135,6 +135,6 @@ def factorized_quads_Energy(t2,t2_dagger,t3,l2,g,o,v):
     energy += 0.125000000000000 * einsum('baej,ijba,kldc,edcikl', g[v, v, v, o], t2_dagger, l2, t3, optimize=['einsum_path', (0, 1), (0, 1), (0, 1)])
     
     
-    
+    energy=energy*0.5 
     print('factorized Qf energy contribution:', energy)
     return energy
