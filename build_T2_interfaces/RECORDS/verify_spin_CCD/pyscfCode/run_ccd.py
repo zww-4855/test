@@ -1,10 +1,10 @@
 import numpy as np
+import pyscf
+from pyscf import ao2mo
+from pyscf import cc
 
 def main():
     """ Initialize calculation details, 2e- integrals, Fock matrix, etc """
-    import pyscf
-    from pyscf import ao2mo
-    from pyscf import cc
 
     # run pyscf for some reason
     basis = '6-31G'
@@ -75,4 +75,33 @@ def main():
 
     print(2.0*np.einsum('ijij',eriFull[:nocc, :nocc, :nocc, :nocc])- np.einsum('ijji',eriFull[:nocc, :nocc, :nocc, :nocc]))
 #+np.einsum('ijij', g[:nocc, :nocc, :nocc, :nocc]))
+
+    test_rhf_energy(mol,mf,orb)
+
+def test_rhf_energy(mol,mf,orb):
+    eri = ao2mo.full(mol, orb, verbose=0)
+    print('eri:', eri, np.shape(eri))
+    eriFull=ao2mo.restore('s1', eri, orb.shape[1])
+    print('full', eriFull,np.shape(eriFull))
+    eriFull=eriFull.transpose(0,2,1,3)
+
+    hcore=mf.get_hcore()
+    hcoreMO=orb.T @ hcore @ orb
+
+    f=mf.get_fock()
+    fock=orb.T @ f @ orb
+
+    nelec=mol.nelectron
+    nocc = nelec // 2
+
+    test_e=np.einsum('ii',hcoreMO[:nocc,:nocc])+np.einsum('ii',fock[:nocc,:nocc])
+
+    teint_energy=2.0*np.einsum('ijij',eriFull[:nocc, :nocc, :nocc, :nocc])- np.einsum('ijji',eriFull[:nocc, :nocc, :nocc, :nocc])
+    test_e2=np.einsum('ii',hcoreMO[:nocc,:nocc])*2.0+teint_energy
+
+    print(mf.e_tot,test_e+mf.energy_nuc(),test_e2+mf.energy_nuc())
+
+## TODO: 
+## Construct general code for both RHF and UHF
+## Write test to verify I get same HF SCF energy using 1 and 2 e- ints
 main()
