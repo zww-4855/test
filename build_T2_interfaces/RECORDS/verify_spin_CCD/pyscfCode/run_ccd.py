@@ -108,6 +108,19 @@ def main():
         g_abab = ao2mo.incore.general(eri, (orb[0],orb[0],orb[1],orb[1]))
         print(g_aaaa[0,0,:3,:3], g_bbbb[0,0,:3,:3],  g_abab[0,0,:3,:3])
 
+
+# Verify the 2e- integral coulomb energy
+        na=n_a
+        nb=n_b
+        ga=g_aaaa.transpose(0,2,1,3)
+        gb=g_bbbb.transpose(0,2,1,3)
+        e_coul=np.einsum('ijij',ga[:na,:na,:na,:na])+np.einsum('ijij',gb[:nb,:nb,:nb,:nb])
+        e_exch=0.5*np.einsum('ijji',ga[:na,:na,:na,:na])+0.5*np.einsum('ijji',gb[:nb,:nb,:nb,:nb])
+
+
+        print('total 2e- integral energy:',e_coul-e_exch)
+
+
 # Now, convert to Dirac notation, and antisymmetrize g_aaaa/g_bbbb
         g_aaaa = g_aaaa.transpose(0,2,1,3)-g_aaaa.transpose(0,3,1,2)
         g_bbbb = g_bbbb.transpose(0,2,1,3)-g_bbbb.transpose(0,3,1,2)
@@ -119,7 +132,6 @@ def main():
         e2=0.5*np.einsum('ii',faa[:n_a,:n_a])  +0.5*np.einsum('ii',fbb[:n_b,:n_b])
         print('final uhf energy:', e1+e2)
 
-# Now verify the 2e- integral coulomb energy
 
 
 def test_rhf_energy(mol,mf,orb):
