@@ -21,64 +21,14 @@ def main():
     occ=mf.mo_occ
     nelec=mol.nelectron
     nocc = nelec // 2
-
     orb=mf.mo_coeff
-    f=mf.get_fock()
-    eri=ao2mo.kernel(mol, orb)
-
-
-
     e_hf=mf.e_tot
     print('e_hf:', e_hf)
-    mycc=cc.CCSD(mf)
-    eris = mycc.ao2mo(mycc.mo_coeff)
-    print('eris', eris,np.shape(eris))
 
-
-    fock = eris.fock
-    mo_e_o = eris.mo_energy[:nocc]
-    mo_e_v = eris.mo_energy[nocc:] + mycc.level_shift
-    print('fock mat:',fock)
-    eints=mol.intor('int2e', aosym='s1')
-    print('SHAPE OF LOADED 2E INTS:', np.shape(eints))
-    eri_ints = mol.ao2mo(eints,orb,aosym='s1')
-    print(np.shape(eri_ints),nocc,np.shape(fock))
-    eri8 = ao2mo.restore('s1', eints, orb.shape[1])
-    print(eri8.shape)# in format (ij|kl)
-    # change to format <ik|jl>
-    eri8=eri8.transpose(0,2,3,1)
-
-    print(orb.shape[1])
-    gtei=2.0*eri8 #- eri8.transpose(0,1,3,2)#np.einsum('ijkl',eri8) - np.einsum('ijlk',eri8)
-    g=gtei
-#    g=gtei.transpose(0,1,3,2)
-
-    hcore=mf.get_hcore()
-    hcoreMO=orb.T @ hcore @ orb
-
-
-    test_e=np.einsum('ii',hcoreMO[:nocc,:nocc])+np.einsum('ii',fock[:nocc,:nocc])
-    print('test_e:', test_e)
-    print('diagonal of hcore and f', np.einsum('ii',fock[:nocc,:nocc]),np.einsum('ii',hcoreMO[:nocc,:nocc]))
-    #print('true <ij||ij> energy:', mf.e2)
-    #print('true 1e energy:', mf.e1)
-    for i in range(4):
-        eri8 = np.tensordot(eri8, orb, axes=1).transpose(3, 0, 1, 2)
-    eri8 = eri8.transpose(0, 2, 3, 1)
-
-    print(np.einsum('ii',fock[:nocc,:nocc])*2.0 -np.einsum('jiji',eri8[:nocc, :nocc, :nocc, :nocc]))#np.einsum('ijij',eri8[:nocc, :nocc, :nocc, :nocc])-np.einsum('ijij',eri8[:nocc, :nocc, :nocc, :nocc].transpose(0,1,3,2)))
-    eri = ao2mo.full(mol, orb, verbose=0)
-    print('eri:', eri, np.shape(eri))
-    eriFull=ao2mo.restore('s1', eri, orb.shape[1])
-    print('full', eriFull,np.shape(eriFull))
-    eriFull=eriFull.transpose(0,2,1,3)
-
-    print(2.0*np.einsum('ijij',eriFull[:nocc, :nocc, :nocc, :nocc])- np.einsum('ijji',eriFull[:nocc, :nocc, :nocc, :nocc]))
-#+np.einsum('ijij', g[:nocc, :nocc, :nocc, :nocc]))
-
+# Check and make sure integrals are transformed to MO basis correctly for RHF
     test_rhf_energy(mol,mf,orb)
 
-
+# Now check the same for UHF
     mf = mol.UHF()
     mf.run()
     orb=mf.mo_coeff
@@ -92,26 +42,16 @@ def main():
         faa=orb[0].T@f[0]@orb[0]
         fbb=orb[1].T@f[1]@orb[1]
 
-        mo_energy = mf.mo_energy
-        import sys
-        print(mo_energy[0],mo_energy[1])
-        e_idx_a = np.argsort(mo_energy[0])
-        e_idx_b = np.argsort(mo_energy[1])
-        e_sort_a = mo_energy[0][e_idx_a]
-        e_sort_b = mo_energy[1][e_idx_b]
-        nmo = mo_energy[0].size
-        n_a, n_b = mf.nelec
+
+        na, nb = mf.nelec
         print(np.allclose(orb[0],orb[1]),np.shape(orb[0]))
         eri = mol.intor('int2e', aosym='s1')
         g_aaaa = ao2mo.incore.general(eri, (orb[0],orb[0],orb[0],orb[0]))
         g_bbbb = ao2mo.incore.general(eri, (orb[1],orb[1],orb[1],orb[1]))
         g_abab = ao2mo.incore.general(eri, (orb[0],orb[0],orb[1],orb[1]))
-        print(g_aaaa[0,0,:3,:3], g_bbbb[0,0,:3,:3],  g_abab[0,0,:3,:3])
 
 
 # Verify the 2e- integral coulomb energy
-        na=n_a
-        nb=n_b
         ga=g_aaaa.transpose(0,2,1,3)
         gb=g_bbbb.transpose(0,2,1,3)
         e_coul=np.einsum('ijij',ga[:na,:na,:na,:na])+np.einsum('ijij',gb[:nb,:nb,:nb,:nb])
@@ -128,8 +68,8 @@ def main():
 
 
 # Now, verify the UHF energy
-        e1=0.5*np.einsum('ii',h1aa[:n_a,:n_a]) +0.5*np.einsum('ii',h1bb[:n_b,:n_b])
-        e2=0.5*np.einsum('ii',faa[:n_a,:n_a])  +0.5*np.einsum('ii',fbb[:n_b,:n_b])
+        e1=0.5*np.einsum('ii',h1aa[:na,:na]) +0.5*np.einsum('ii',h1bb[:nb,:nb])
+        e2=0.5*np.einsum('ii',faa[:na,:na])  +0.5*np.einsum('ii',fbb[:nb,:nb])
         print('final uhf energy:', e1+e2)
 
 
