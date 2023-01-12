@@ -78,6 +78,50 @@ def main():
 
     test_rhf_energy(mol,mf,orb)
 
+
+    mf = mol.UHF()
+    mf.run()
+    orb=mf.mo_coeff
+    print(np.shape(orb),orb.ndim)
+    if orb.ndim > 2: # MEANS IM RUNNING UHF CALC
+        h1e = mf.get_hcore()
+        h1aa=orb[0].T@h1e@orb[0]
+        h1bb=orb[1].T@h1e@orb[1]
+
+        f=mf.get_fock()
+        faa=orb[0].T@f[0]@orb[0]
+        fbb=orb[1].T@f[1]@orb[1]
+
+        mo_energy = mf.mo_energy
+        import sys
+        print(mo_energy[0],mo_energy[1])
+        e_idx_a = np.argsort(mo_energy[0])
+        e_idx_b = np.argsort(mo_energy[1])
+        e_sort_a = mo_energy[0][e_idx_a]
+        e_sort_b = mo_energy[1][e_idx_b]
+        nmo = mo_energy[0].size
+        n_a, n_b = mf.nelec
+        print(np.allclose(orb[0],orb[1]),np.shape(orb[0]))
+        eri = mol.intor('int2e', aosym='s1')
+        g_aaaa = ao2mo.incore.general(eri, (orb[0],orb[0],orb[0],orb[0]))
+        g_bbbb = ao2mo.incore.general(eri, (orb[1],orb[1],orb[1],orb[1]))
+        g_abab = ao2mo.incore.general(eri, (orb[0],orb[0],orb[1],orb[1]))
+        print(g_aaaa[0,0,:3,:3], g_bbbb[0,0,:3,:3],  g_abab[0,0,:3,:3])
+
+# Now, convert to Dirac notation, and antisymmetrize g_aaaa/g_bbbb
+        g_aaaa = g_aaaa.transpose(0,2,1,3)-g_aaaa.transpose(0,3,1,2)
+        g_bbbb = g_bbbb.transpose(0,2,1,3)-g_bbbb.transpose(0,3,1,2)
+        g_abab = g_abab.transpose(0,2,1,3)
+
+
+# Now, verify the UHF energy
+        e1=0.5*np.einsum('ii',h1aa[:n_a,:n_a]) +0.5*np.einsum('ii',h1bb[:n_b,:n_b])
+        e2=0.5*np.einsum('ii',faa[:n_a,:n_a])  +0.5*np.einsum('ii',fbb[:n_b,:n_b])
+        print('final uhf energy:', e1+e2)
+
+# Now verify the 2e- integral coulomb energy
+
+
 def test_rhf_energy(mol,mf,orb):
     eri = ao2mo.full(mol, orb, verbose=0)
     print('eri:', eri, np.shape(eri))
