@@ -45,15 +45,34 @@ def main():
         nb  = na
         orb = np.array((orb,orb))
         print('shape of numpy coeff rhf:', np.shape(orb))
-
+        moE_aa=mf.mo_energy
+        moE_bb=moE_aa
     elif orb.ndim > 2: # MEANS IM RUNNING UHF CALC
         h1e=np.array((mf.get_hcore(), mf.get_hcore()))
         f=mf.get_fock()
         na,nb=mf.nelec
-
+        moE_aa=mf.mo_energy[0]
+        moE_bb=mf.mo_energy[1]
+        print('mo energy:',np.shape(moE_aa))
     
-
+    faa=f[0]
+    fbb=f[1]
     g_aaaa,g_bbbb,g_abab=generalUHF(mf,mol,h1e,f,na,nb,orb)
+
+
+    n=np.newaxis
+    occ_aa=slice(None, na)
+    virt_aa=slice(na,None)
+    occ_bb=slice(None,nb)
+    virt_bb=slice(nb,None)
+    epsaa=moE_aa
+    epsbb=moE_bb
+
+    eabij_aa=1.0/(-epsaa[virt_aa,n,n,n]-epsaa[n,virt_aa,n,n]+epsaa[n,n,occ_aa,n]+epsaa[n,n,n,occ_aa])
+    eabij_bb=1.0/(-epsbb[virt_bb,n,n,n]-epsbb[n,virt_bb,n,n]+epsbb[n,n,occ_bb,n]+epsbb[n,n,n,occ_bb])
+    eabij_ab=1.0/(-epsaa[virt_aa,n,n,n]-epsbb[n,virt_bb,n,n]+epsaa[n,n,occ_aa,n]+epsbb[n,n,n,occ_bb])
+
+    print('eabij_aa:', eabij_aa,np.shape(eabij_aa))
     import sys
     sys.exit()
 
