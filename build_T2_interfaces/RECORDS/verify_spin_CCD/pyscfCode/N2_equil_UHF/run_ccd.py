@@ -138,7 +138,7 @@ def convertSCFinfo(mf,mol,orb):
     #print(na,nb,nvirta,nvirtb,faa.shape,fbb.shape)
     #sys.exit()
     faa,fbb,g_aaaa,g_bbbb,g_abab=generalUHF(mf,mol,h1e,f,na,nb,orb)
-
+    print('moE:',moE_aa,moE_bb)
 
     n=np.newaxis
     occ_aa=slice(None, na)

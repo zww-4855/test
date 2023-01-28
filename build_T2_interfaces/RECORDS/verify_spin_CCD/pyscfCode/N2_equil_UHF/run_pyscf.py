@@ -16,8 +16,9 @@ def main():
         basis=basis)
 
 
-
     mf = mol.UHF()
+    mf.init_guess='1e'
+    mf.conv_tol_grad=1E-10
     mf.run()
 
     from pyscf.lib import logger
