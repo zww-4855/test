@@ -1,0 +1,26 @@
+core file size          (blocks, -c) unlimited
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 2057370
+max locked memory       (kbytes, -l) unlimited
+max memory size         (kbytes, -m) 83886080
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) unlimited
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 2057370
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+Traceback (most recent call last):
+  File "run_pyscf.py", line 30, in <module>
+    main()
+  File "run_pyscf.py", line 27, in main
+    run_ccd.ccd_main(mf,mol,orb)
+  File "/blue/bartlett/z.windom/MOLSSI_develop/test/build_T2_interfaces/RECORDS/verify_spin_CCD/pyscfCode/F2_UHF/run_ccd.py", line 16, in ccd_main
+    t2aaaa,t2bbbb,t2abab,currentE=ccd_kernel(na,nb,nvirta,nvirtb,occ_aa,virt_aa,occ_bb,virt_bb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE)
+  File "/blue/bartlett/z.windom/MOLSSI_develop/test/build_T2_interfaces/RECORDS/verify_spin_CCD/pyscfCode/F2_UHF/run_ccd.py", line 84, in ccd_kernel
+    raise ValueError("CCSDT iterations did not converge")
+ValueError: CCSDT iterations did not converge

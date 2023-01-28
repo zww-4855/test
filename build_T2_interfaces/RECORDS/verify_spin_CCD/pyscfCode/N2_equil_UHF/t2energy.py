@@ -7,15 +7,11 @@ def ccd_energy_with_spin(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, 
 
     o = oa
     v = va
-    print('o,',np.shape(g_aaaa),np.shape(t2_aaaa), o,v,np.shape(f_aa))
-    #     1.0000 f_aa(i,i)
-    #print(f_aa[:o,:o])
     energy =  1.000000000000000 * einsum('ii', f_aa[o, o])
 
     #     1.0000 f_bb(i,i)
     energy +=  1.000000000000000 * einsum('ii', f_bb[o, o])
 
-    print('energy of fock terms:', energy)
 
     #    -0.5000 <j,i||j,i>_aaaa
     energy += -0.500000000000000 * einsum('jiji', g_aaaa[o, o, o, o])
@@ -28,7 +24,6 @@ def ccd_energy_with_spin(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, 
 
     #    -0.5000 <j,i||j,i>_bbbb
     energy += -0.500000000000000 * einsum('jiji', g_bbbb[o, o, o, o])
-    print('energy with 2e ints:', energy)
     #     0.2500 <j,i||a,b>_aaaa*t2_aaaa(a,b,j,i)
     energy +=  0.250000000000000 * einsum('jiab,abji', g_aaaa[o, o, v, v], t2_aaaa)
 

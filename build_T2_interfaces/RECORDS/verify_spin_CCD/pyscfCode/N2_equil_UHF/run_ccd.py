@@ -13,10 +13,10 @@ def ccd_main(mf,mol,orb):
     nucE=mf.energy_nuc()
     print('nuclear repulsion:',nucE)
     print(np.shape(gaaaa))
-    t2aaaa,t2bbbb,t2abab,currentE=ccd_kernel(na,nb,nvirta,nvirtb,occ_aa,virt_aa,occ_bb,virt_bb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE)
+    t2aaaa,t2bbbb,t2abab,currentE=ccd_kernel(na,nb,nvirta,nvirtb,occ_aa,virt_aa,occ_bb,virt_bb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE,15, 4)
 
 
-def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE):
+def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE,diis_size=None, diis_start_cycle=4):
     fock_e_abij_aa = np.reciprocal(eabij_aa)
     fock_e_abij_bb = np.reciprocal(eabij_bb)
     fock_e_abij_ab = np.reciprocal(eabij_ab)
@@ -26,41 +26,59 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
     t2aaaa=np.zeros((nvirta,nvirta,na,na))
     t2bbbb=np.zeros((nvirtb,nvirtb,nb,nb))
     t2abab=np.zeros((nvirta,nvirtb,na,nb))
-    print(np.shape(gaaaa))
-    print('heading into energy calc:',occaa,virtaa)
+
+    if diis_size is not None:
+        from diis import DIIS
+        diis_update = DIIS(diis_size, start_iter=diis_start_cycle)
+        t2aaaa_dim = t2aaaa.size
+        t2bbbb_dim = t2bbbb.size
+        t2abab_dim = t2abab.size
+
+        old_vec = np.hstack((t2aaaa.flatten(), t2bbbb.flatten(),t2abab.flatten()))
+
+
+
     old_energy = t2energy.ccd_energy_with_spin(t2aaaa, t2bbbb, t2abab, faa,fbb,gaaaa,gbbbb,gabab,occaa,occbb,virtaa,virtbb)
 
     print('initial energy:',old_energy)
     max_iter=75
-    stopping_eps=1E-10
+    stopping_eps=1E-12
     print("    ==> CCSDT amplitude equations <==")
     print("")
-    print("     Iter              Corr. Energy                 |dE|                 |dT|")
+    print("     Iter              Corr. Energy                 |dE|    |dT|")
     print(flush=True)
     for idx in range(max_iter):
+        resid_aaaa = t2residEqns.ccd_t2_aaaa_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)+fock_e_abij_aa*t2aaaa
 
-        resid_aaaa = t2residEqns.ccd_t2_aaaa_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)
-
-        resid_bbbb = t2residEqns.ccd_t2_bbbb_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)
-
-        resid_abab = t2residEqns.ccd_t2_abab_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)
-
-
+        print('there zww hi')
+        resid_bbbb = t2residEqns.ccd_t2_bbbb_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)+fock_e_abij_bb*t2bbbb
+        print('still here')
+        resid_abab = t2residEqns.ccd_t2_abab_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)+ fock_e_abij_ab*t2abab
+        print('hi')
 #doubles_residual(t1, t2, t3, fock, g, o, v,e_abij,t4)
-        #residual_quads   = Qf.get_t4(t2,t3,t4,g,o,v,fock)
-
-
+#residual_quads   = Qf.get_t4(t2,t3,t4,g,o,v,fock)
         res_norm = np.linalg.norm(resid_aaaa)+np.linalg.norm(resid_bbbb)+np.linalg.norm(resid_abab)
 
 
 
-        doubles_res_aaaa = resid_aaaa + fock_e_abij_aa * t2aaaa
-        doubles_res_bbbb = resid_bbbb + fock_e_abij_bb * t2bbbb
-        doubles_res_abab = resid_abab + fock_e_abij_ab * t2abab
+        #doubles_res_aaaa = resid_aaaa + fock_e_abij_aa * t2aaaa
+        #doubles_res_bbbb = resid_bbbb + fock_e_abij_bb * t2bbbb
+        #doubles_res_abab = resid_abab + fock_e_abij_ab * t2abab
 
-        new_doubles_aaaa = doubles_res_aaaa * eabij_aa
-        new_doubles_bbbb = doubles_res_bbbb * eabij_bb
-        new_doubles_abab = doubles_res_abab * eabij_ab
+        new_doubles_aaaa = resid_aaaa*eabij_aa #doubles_res_aaaa * eabij_aa
+        new_doubles_bbbb = resid_bbbb*eabij_bb #doubles_res_bbbb * eabij_bb
+        new_doubles_abab = resid_abab*eabij_ab #doubles_res_abab * eabij_ab
+        # diis update
+        if diis_size is not None:
+            vectorized_iterate = np.hstack(
+                (new_doubles_aaaa.flatten(), new_doubles_bbbb.flatten(), new_doubles_abab.flatten()))
+            error_vec = old_vec - vectorized_iterate
+            new_vectorized_iterate = diis_update.compute_new_vec(vectorized_iterate,
+                                                                 error_vec)
+            new_doubles_aaaa = new_vectorized_iterate[:t2aaaa_dim].reshape(t2aaaa.shape)
+            new_doubles_bbbb = new_vectorized_iterate[t2aaaa_dim:t2aaaa_dim+t2bbbb_dim].reshape(t2bbbb.shape)
+            new_doubles_abab = new_vectorized_iterate[t2aaaa_dim+t2bbbb_dim:].reshape(t2abab.shape)
+            old_vec = new_vectorized_iterate
 
 
         current_energy = t2energy.ccd_energy_with_spin(new_doubles_aaaa, new_doubles_bbbb, new_doubles_abab, faa,fbb,gaaaa,gbbbb,gabab,occaa,occbb,virtaa,virtbb)
@@ -68,7 +86,7 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
 
         print("    {: 5d} {: 20.12f} {: 20.12f} {: 20.12f}".format(idx, nucE+current_energy - hf_energy, delta_e, res_norm))
         print(flush=True)
-        if delta_e < stopping_eps and res_norm < stopping_eps:
+        if delta_e < stopping_eps:# and res_norm < stopping_eps:
             # assign t1 and t2 variables for future use before breaking
             t2aaaa = new_doubles_aaaa
             t2bbbb = new_doubles_bbbb
