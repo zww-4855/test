@@ -627,7 +627,7 @@ def residQf1_bbbb(g,l2,t2,o,v):
 
     #	 -0.2500 P(i,j)<m,n||k,l>_abab*l2_abab(k,l,d,c)*t2_abab(d,c,m,j)*t2_bbbb(a,b,i,n)
     contracted_intermediate = -0.250000000000000 * einsum('mnkl,kldc,dcmj,abin->abij', g_abab[o, o, o, o], l2_abab, t2_abab, t2_bbbb, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
-    double_res +=  1.00000 * contracted_intermediate + -1.00000 * einsum('abij->abji', contracted_intermediate) 
+    double_res =  1.00000 * contracted_intermediate + -1.00000 * einsum('abij->abji', contracted_intermediate) 
     
     #	 -0.2500 P(i,j)<m,n||k,l>_abab*l2_abab(k,l,c,d)*t2_abab(c,d,m,j)*t2_bbbb(a,b,i,n)
     contracted_intermediate = -0.250000000000000 * einsum('mnkl,klcd,cdmj,abin->abij', g_abab[o, o, o, o], l2_abab, t2_abab, t2_bbbb, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
@@ -1234,7 +1234,7 @@ def residQf1_abab(g,l2,t2,o,v):
     t2_abab=t2["abab"]
  
     #	 -0.2500 <m,n||k,l>_abab*l2_abab(k,l,d,c)*t2_abab(d,c,m,j)*t2_abab(a,b,i,n)
-    double_res += -0.250000000000000 * einsum('mnkl,kldc,dcmj,abin->abij', g_abab[o, o, o, o], l2_abab, t2_abab, t2_abab, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
+    double_res = -0.250000000000000 * einsum('mnkl,kldc,dcmj,abin->abij', g_abab[o, o, o, o], l2_abab, t2_abab, t2_abab, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])
     
     #	 -0.2500 <m,n||k,l>_abab*l2_abab(k,l,c,d)*t2_abab(c,d,m,j)*t2_abab(a,b,i,n)
     double_res += -0.250000000000000 * einsum('mnkl,klcd,cdmj,abin->abij', g_abab[o, o, o, o], l2_abab, t2_abab, t2_abab, optimize=['einsum_path', (0, 1), (0, 2), (0, 1)])

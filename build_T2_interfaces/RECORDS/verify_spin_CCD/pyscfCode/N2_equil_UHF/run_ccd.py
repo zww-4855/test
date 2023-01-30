@@ -47,10 +47,10 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
     print("")
     print("     Iter              Corr. Energy                 |dE|    |dT|")
     print(flush=True)
-    g={"aaaa":g_aaaa,"bbbb":g_bbbb,"abab":g_abab}
+    g={"aaaa":gaaaa,"bbbb":gbbbb,"abab":gabab}
     for idx in range(max_iter):
-        t2={"aaaa":t2_aaaa,"bbbb":t2_bbbb,"abab":t2_abab}
-        l2={"aaaa":t2_aaaa.transpose(2,3,0,1),"bbbb":t2_bbbb.transpose(2,3,0,1),"abab":t2_abab.transpose(2,3,0,1)}
+        t2={"aaaa":t2aaaa,"bbbb":t2bbbb,"abab":t2abab}
+        l2={"aaaa":t2aaaa.transpose(2,3,0,1),"bbbb":t2bbbb.transpose(2,3,0,1),"abab":t2abab.transpose(2,3,0,1)}
 
 
         resid_aaaa = t2residEqns.ccd_t2_aaaa_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb, cc_runtype)+fock_e_abij_aa*t2aaaa
@@ -65,9 +65,9 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
 # ***I DONT KNOW IF THE PREFACTOR OF 0.5 IS RIGHT
         if cc_runtype["ccdType"]=='CCDQf-1':
             import modify_T2resid_T4Qf1 as qf1
-            qf1_aaaa=qf1.residQf1_aaaa(g,l2,t2,o,v)
-            qf1_bbbb=qf1.residQf1_bbbb(g,l2,t2,o,v)
-            qf1_abab=qf1.residQf1_abab(g,l2,t2,o,v)
+            qf1_aaaa=qf1.residQf1_aaaa(g,l2,t2,occaa,virtaa)
+            qf1_bbbb=qf1.residQf1_bbbb(g,l2,t2,occaa,virtaa)
+            qf1_abab=qf1.residQf1_abab(g,l2,t2,occaa,virtaa)
             resid_aaaa+=0.5*qf1_aaaa
             resid_bbbb+=0.5*qf1_bbbb
             resid_abab+=0.5*qf1_abab
@@ -101,7 +101,7 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
         current_energy = t2energy.ccd_energy_with_spin(new_doubles_aaaa, new_doubles_bbbb, new_doubles_abab, faa,fbb,gaaaa,gbbbb,gabab,occaa,occbb,virtaa,virtbb)
         delta_e = np.abs(old_energy - current_energy)
 
-        print("    {: 5d} {: 20.12f} {: 20.12f} {: 20.12f}".format(idx, nucE+current_energy - hf_energy, delta_e, res_norm))
+        print("    {: 5d} {: 20.12f} {: 20.12f} ".format(idx, nucE+current_energy - hf_energy, delta_e))
         print(flush=True)
         if delta_e < stopping_eps:# and res_norm < stopping_eps:
             # assign t1 and t2 variables for future use before breaking
