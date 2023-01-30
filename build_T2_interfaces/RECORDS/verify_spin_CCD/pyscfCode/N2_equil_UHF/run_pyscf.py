@@ -44,7 +44,9 @@ def main():
     print(np.shape(orb))
     import run_ccd as run_ccd 
  
-    run_ccd.ccd_main(mf,mol,orb)
+    cc_runtype={"ccdType":"ccd"}
+
+    run_ccd.ccd_main(mf,mol,orb,cc_runtype)
 
 
 main()

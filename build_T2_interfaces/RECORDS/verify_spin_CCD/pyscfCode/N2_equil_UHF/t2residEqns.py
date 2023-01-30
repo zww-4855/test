@@ -2,7 +2,7 @@ from numpy import einsum
 
 
 
-def ccd_t2_aaaa_residual(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, g_abab, oa, ob, va, vb):
+def ccd_t2_aaaa_residual(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, g_abab, oa, ob, va, vb,cc_runtype):
     
     #    < 0 | m* n* f e e(-T) H e(T) | 0> :
     
@@ -82,11 +82,12 @@ def ccd_t2_aaaa_residual(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, 
     
     #	  0.5000 <i,j||a,b>_abab*t2_aaaa(a,e,m,n)*t2_abab(f,b,i,j)
     doubles_res +=  0.500000000000000 * einsum('ijab,aemn,fbij->efmn', g_abab[o, o, v, v], t2_aaaa, t2_abab, optimize=['einsum_path', (0, 2), (0, 1)])
-    
+   
+
     return doubles_res
 
 
-def ccd_t2_bbbb_residual(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, g_abab, oa, ob, va, vb):
+def ccd_t2_bbbb_residual(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, g_abab, oa, ob, va, vb, cc_runtype):
     
     #    < 0 | m* n* f e e(-T) H e(T) | 0> :
     
@@ -170,7 +171,7 @@ def ccd_t2_bbbb_residual(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, 
     return doubles_res
 
 
-def ccd_t2_abab_residual(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, g_abab, oa, ob, va, vb):
+def ccd_t2_abab_residual(t2_aaaa, t2_bbbb, t2_abab, f_aa, f_bb, g_aaaa, g_bbbb, g_abab, oa, ob, va, vb, cc_runtype):
     
     #    < 0 | m* n* f e e(-T) H e(T) | 0> :
     

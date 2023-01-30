@@ -6,17 +6,17 @@ import t2energy as t2energy
 import t2residEqns as t2residEqns
 import sys
 
-def ccd_main(mf,mol,orb):
+def ccd_main(mf,mol,orb,cc_runtype):
     na,nb,nvirta,nvirtb,occ_aa,occ_bb,virt_aa,virt_bb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab=convertSCFinfo(mf,mol,orb)
     hf_energy=mf.e_tot
     print('hf energy:', hf_energy)
     nucE=mf.energy_nuc()
     print('nuclear repulsion:',nucE)
     print(np.shape(gaaaa))
-    t2aaaa,t2bbbb,t2abab,currentE=ccd_kernel(na,nb,nvirta,nvirtb,occ_aa,virt_aa,occ_bb,virt_bb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE,15, 4)
+    t2aaaa,t2bbbb,t2abab,currentE=ccd_kernel(na,nb,nvirta,nvirtb,occ_aa,virt_aa,occ_bb,virt_bb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE,15, 4,cc_runtype)
 
 
-def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE,diis_size=None, diis_start_cycle=4):
+def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb,gabab,eabij_aa,eabij_bb,eabij_ab,hf_energy,nucE,diis_size=None, diis_start_cycle=4,cc_runtype=None):
     fock_e_abij_aa = np.reciprocal(eabij_aa)
     fock_e_abij_bb = np.reciprocal(eabij_bb)
     fock_e_abij_ab = np.reciprocal(eabij_ab)
@@ -47,23 +47,40 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
     print("")
     print("     Iter              Corr. Energy                 |dE|    |dT|")
     print(flush=True)
+    g={"aaaa":g_aaaa,"bbbb":g_bbbb,"abab":g_abab}
     for idx in range(max_iter):
-        resid_aaaa = t2residEqns.ccd_t2_aaaa_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)+fock_e_abij_aa*t2aaaa
+        t2={"aaaa":t2_aaaa,"bbbb":t2_bbbb,"abab":t2_abab}
+        l2={"aaaa":t2_aaaa.transpose(2,3,0,1),"bbbb":t2_bbbb.transpose(2,3,0,1),"abab":t2_abab.transpose(2,3,0,1)}
+
+
+        resid_aaaa = t2residEqns.ccd_t2_aaaa_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb, cc_runtype)+fock_e_abij_aa*t2aaaa
 
         print('there zww hi')
-        resid_bbbb = t2residEqns.ccd_t2_bbbb_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)+fock_e_abij_bb*t2bbbb
+        resid_bbbb = t2residEqns.ccd_t2_bbbb_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb, cc_runtype)+fock_e_abij_bb*t2bbbb
         print('still here')
-        resid_abab = t2residEqns.ccd_t2_abab_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb)+ fock_e_abij_ab*t2abab
+        resid_abab = t2residEqns.ccd_t2_abab_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb, cc_runtype)+ fock_e_abij_ab*t2abab
         print('hi')
-#doubles_residual(t1, t2, t3, fock, g, o, v,e_abij,t4)
-#residual_quads   = Qf.get_t4(t2,t3,t4,g,o,v,fock)
-        res_norm = np.linalg.norm(resid_aaaa)+np.linalg.norm(resid_bbbb)+np.linalg.norm(resid_abab)
 
 
+# ***I DONT KNOW IF THE PREFACTOR OF 0.5 IS RIGHT
+        if cc_runtype["ccdType"]=='CCDQf-1':
+            import modify_T2resid_T4Qf1 as qf1
+            qf1_aaaa=qf1.residQf1_aaaa(g,l2,t2,o,v)
+            qf1_bbbb=qf1.residQf1_bbbb(g,l2,t2,o,v)
+            qf1_abab=qf1.residQf1_abab(g,l2,t2,o,v)
+            resid_aaaa+=0.5*qf1_aaaa
+            resid_bbbb+=0.5*qf1_bbbb
+            resid_abab+=0.5*qf1_abab
 
-        #doubles_res_aaaa = resid_aaaa + fock_e_abij_aa * t2aaaa
-        #doubles_res_bbbb = resid_bbbb + fock_e_abij_bb * t2bbbb
-        #doubles_res_abab = resid_abab + fock_e_abij_ab * t2abab
+        elif cc_runtype["ccdType"]=='CCDQf-2':
+            import modify_T2resid_T4Qf1 as qf1
+            import ccdqf_2_resid as qf2
+    
+        elif cc_runtype["ccdType"]=='CCDQfHf-1':
+            import modify_T2resid_T4Qf1 as qf1
+            import ccdqf_2_resid as qf2
+            import ccdqfhf_1_resid as hf1
+
 
         new_doubles_aaaa = resid_aaaa*eabij_aa #doubles_res_aaaa * eabij_aa
         new_doubles_bbbb = resid_bbbb*eabij_bb #doubles_res_bbbb * eabij_bb
