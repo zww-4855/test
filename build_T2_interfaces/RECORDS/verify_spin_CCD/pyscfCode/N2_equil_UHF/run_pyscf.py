@@ -7,12 +7,12 @@ def main():
     """ Initialize calculation details, 2e- integrals, Fock matrix, etc """
 
     # run pyscf for some reason
-    basis = 'ccpvdz'
+    basis = '6-31G'#'ccpvdz'
     mol = pyscf.M(
-        atom='N 0 0 0; N 0 0 {}'.format(2.0749193),
+        atom='H 0 0 0; F 0 0 {}'.format(0.917), #'N 0 0 0; N 0 0 {}'.format(2.0749193),
         #atom='Be 0 0 0'
         verbose=5,
-        unit='b',
+        #unit='b',
         basis=basis)
 
 

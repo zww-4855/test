@@ -74,7 +74,20 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
 
         elif cc_runtype["ccdType"]=='CCDQf-2':
             import modify_T2resid_T4Qf1 as qf1
-            import ccdqf_2_resid as qf2
+            import modify_T2resid_T4Qf2 as qf2
+
+            qf1_aaaa=qf1.residQf1_aaaa(g,l2,t2,occaa,virtaa)
+            qf1_bbbb=qf1.residQf1_bbbb(g,l2,t2,occaa,virtaa)
+            qf1_abab=qf1.residQf1_abab(g,l2,t2,occaa,virtaa)
+
+            qf2_aaaa=qf2.residQf2_aaaa(g,l2,t2,occaa,virtaa)
+            qf2_bbbb=qf2.residQf2_bbbb(g,l2,t2,occaa,virtaa)
+            qf2_abab=qf2.residQf2_abab(g,l2,t2,occaa,virtaa)
+
+            resid_aaaa+=0.5*qf1_aaaa + (1.0/6.0)*qf2_aaaa
+            resid_bbbb+=0.5*qf1_bbbb + (1.0/6.0)*qf2_bbbb
+            resid_abab+=0.5*qf1_abab + (1.0/6.0)*qf2_abab
+
     
         elif cc_runtype["ccdType"]=='CCDQfHf-1':
             import modify_T2resid_T4Qf1 as qf1
@@ -120,8 +133,16 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
 
     
     print('\n\n\n\n\n\n')
-    print('Final, total correlated energy:', nucE+current_energy)
-    print('Final CCD correlation contribution:', nucE+current_energy-hf_energy)
+    if cc_runtype["ccdType"] != 'CCD(Qf)':
+        print(cc_runtype["ccdType"],' correlation contribution:', nucE+current_energy-hf_energy)
+        print(cc_runtype["ccdType"], ' energy:', nucE+current_energy)
+    if cc_runtype["ccdType"]=='CCD(Qf)':
+        import modify_T2energy_pertQf as pertQf 
+        qf_corr=pertQf.energy_pertQf(g,l2,t2,occaa,virtaa)
+        print('CCD correlation contribution: ', nucE+current_energy-hf_energy)
+        print('(Qf) perturbative energy correction: ',qf_corr)
+        print(cc_runtype["ccdType"], ' energy:', nucE+current_energy+qf_corr)
+
     return t2aaaa,t2bbbb,t2abab,current_energy
 
 
