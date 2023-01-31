@@ -43,9 +43,9 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
     print('initial energy:',old_energy)
     max_iter=75
     stopping_eps=1E-12
-    print("    ==> CCSDT amplitude equations <==")
+    print("    ==> ", cc_runtype["ccdType"], " amplitude equations <==")
     print("")
-    print("     Iter              Corr. Energy                 |dE|    |dT|")
+    print("     Iter              Corr. Energy                 |dE|    ")
     print(flush=True)
     g={"aaaa":gaaaa,"bbbb":gbbbb,"abab":gabab}
     for idx in range(max_iter):
@@ -55,11 +55,8 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
 
         resid_aaaa = t2residEqns.ccd_t2_aaaa_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb, cc_runtype)+fock_e_abij_aa*t2aaaa
 
-        print('there zww hi')
         resid_bbbb = t2residEqns.ccd_t2_bbbb_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb, cc_runtype)+fock_e_abij_bb*t2bbbb
-        print('still here')
         resid_abab = t2residEqns.ccd_t2_abab_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb, cc_runtype)+ fock_e_abij_ab*t2abab
-        print('hi')
 
 
 # ***I DONT KNOW IF THE PREFACTOR OF 0.5 IS RIGHT
@@ -94,10 +91,22 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
             import ccdqf_2_resid as qf2
             import ccdqfhf_1_resid as hf1
 
-
         new_doubles_aaaa = resid_aaaa*eabij_aa #doubles_res_aaaa * eabij_aa
         new_doubles_bbbb = resid_bbbb*eabij_bb #doubles_res_bbbb * eabij_bb
         new_doubles_abab = resid_abab*eabij_ab #doubles_res_abab * eabij_ab
+        if cc_runtype["ccdType"]=='pCCD':
+            new_doubles_aaaa=new_doubles_aaaa*0.0
+            new_doubles_bbbb=new_doubles_aaaa
+            tmpT2=np.zeros((nvirta,nvirta,na,na))
+            for a in range(nvirta):
+                for i in range(na):
+                    tmpT2[a,a,i,i]=new_doubles_abab[a,a,i,i]
+
+            new_doubles_abab=new_doubles_abab*0.0
+            new_doubles_abab=tmpT2
+
+
+
         # diis update
         if diis_size is not None:
             vectorized_iterate = np.hstack(
@@ -132,7 +141,7 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
         raise ValueError("CCSDT iterations did not converge")
 
     
-    print('\n\n\n\n\n\n')
+    print('\n\n\n')
     if cc_runtype["ccdType"] != 'CCD(Qf)':
         print(cc_runtype["ccdType"],' correlation contribution:', nucE+current_energy-hf_energy)
         print(cc_runtype["ccdType"], ' energy:', nucE+current_energy)
@@ -142,6 +151,7 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
         print('CCD correlation contribution: ', nucE+current_energy-hf_energy)
         print('(Qf) perturbative energy correction: ',qf_corr)
         print(cc_runtype["ccdType"], ' energy:', nucE+current_energy+qf_corr)
+    print('\n\n\n')
 
     return t2aaaa,t2bbbb,t2abab,current_energy
 
