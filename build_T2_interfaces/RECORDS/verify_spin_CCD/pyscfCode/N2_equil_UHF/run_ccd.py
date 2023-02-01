@@ -59,6 +59,8 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
         resid_abab = t2residEqns.ccd_t2_abab_residual(t2aaaa, t2bbbb, t2abab, faa, fbb, gaaaa, gbbbb, gabab, occaa, occbb, virtaa, virtbb, cc_runtype)+ fock_e_abij_ab*t2abab
 
 
+
+            
 # ***I DONT KNOW IF THE PREFACTOR OF 0.5 IS RIGHT
         if cc_runtype["ccdType"]=='CCDQf-1':
             import modify_T2resid_T4Qf1 as qf1
@@ -104,7 +106,43 @@ def ccd_kernel(na,nb,nvirta,nvirtb,occaa,virtaa,occbb,virtbb,faa,fbb,gaaaa,gbbbb
 
             new_doubles_abab=new_doubles_abab*0.0
             new_doubles_abab=tmpT2
+        elif cc_runtype["ccdType"]=="DiagCCD":
+            matDim=nvirta*na
+            def reshape(new_doubles_abab,new_doubles_aaaa,new_doubles_bbbb,matDim):
+                abab=new_doubles_abab.transpose(0,2,1,3)
+                aaaa=new_doubles_aaaa.transpose(0,2,1,3)
+                bbbb=new_doubles_bbbb.transpose(0,2,1,3)
+                t2abab=np.reshape(abab,(matDim,matDim),order='F')
+                t2aaaa=np.reshape(aaaa,(matDim,matDim),order='F')
+                t2bbbb=np.reshape(bbbb,(matDim,matDim),order='F')
+                return t2abab,t2aaaa,t2bbbb
 
+            t2abab,t2aaaa,t2bbbb=reshape(new_doubles_abab,new_doubles_aaaa,new_doubles_bbbb,matDim)
+
+            from numpy import linalg
+            def place_tensorDiag(eps,nv,no):
+                t2=np.zeros((nv,nv,no,no))
+                count=0
+                for a in range(nv):
+                    for i in range(no):
+                        t2[a][a][i][i]=eps[count]
+                        count+=1
+                return t2
+
+
+            def diag_t2matrix(t2,nv,no):
+                roots,vec=linalg.eig(t2)
+                indx=roots.argsort()
+                roots=roots[indx]
+                print('roots',roots)
+                newt2=place_tensorDiag(roots,nv,no)
+
+                return newt2
+            
+            t2abab=diag_t2matrix(t2abab,nvirta,na)
+            t2aaaa=diag_t2matrix(t2aaaa,nvirta,na)
+            t2bbbb=diag_t2matrix(t2bbbb,nvirta,na)            
+  
 
 
         # diis update
